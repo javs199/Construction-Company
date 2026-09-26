@@ -291,31 +291,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Story split */}
-      <section id="about" className="border-b border-border bg-surface py-20 md:py-28">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 md:grid-cols-2 md:gap-16 md:px-8 lg:px-10">
+      {/* Trusted Partner split */}
+      <section id="about" className="border-b py-20 md:py-28" style={{ backgroundColor: 'var(--tp-bg)', borderColor: 'var(--tp-border)', color: 'var(--tp-text)' }}>
+        <div className="mx-auto grid max-w-7xl items-start gap-12 px-5 md:grid-cols-2 md:gap-16 md:px-8 lg:px-10">
           <Reveal>
-            <p className="mb-3 font-sans-body text-[11px] uppercase tracking-[0.28em] text-muted-foreground">{t('about.eyebrow')}</p>
+            <div className="relative">
+              <img src={IMG.plans} alt={t('accessibility.imagePlans')} className="aspect-[3/4] w-full rounded-sm object-cover" />
+              <p className="mt-3 font-sans-body text-[11px] uppercase tracking-wider" style={{ color: 'var(--tp-muted)' }}>
+                {t('accessibility.tempImagePartner')}
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="mb-3 font-sans-body text-[11px] uppercase tracking-[0.28em]" style={{ color: 'var(--tp-muted)' }}>{t('trustedPartner.eyebrow')}</p>
             <h2 className="font-display text-3xl font-medium leading-tight md:text-4xl">
-              {t('about.headline')}
+              {t('trustedPartner.headline')}
             </h2>
-            <p className="mt-6 font-sans-body text-sm leading-relaxed text-muted-foreground">
-              {t('about.body')}
+            <p className="mt-6 font-sans-body text-sm leading-relaxed" style={{ color: 'var(--tp-muted)' }}>
+              {t('trustedPartner.body')}
             </p>
-            <ul className="mt-8 space-y-3 font-sans-body text-sm text-foreground">
-              {Array.isArray(t('about.principles')) && t('about.principles').map((m) => (
-                <li key={m} className="flex items-center gap-3 border-b border-border/70 pb-3">
-                  <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-                  {m}
+            <ul className="mt-10 grid gap-6 sm:grid-cols-2">
+              {Array.isArray(t('trustedPartner.principles')) && t('trustedPartner.principles').map((p) => (
+                <li key={p.title} className="border-t pt-4" style={{ borderColor: 'var(--tp-border)' }}>
+                  <h3 className="font-sans-body text-sm font-semibold">{p.title}</h3>
+                  <p className="mt-2 font-sans-body text-xs leading-relaxed" style={{ color: 'var(--tp-muted)' }}>
+                    {p.body}
+                  </p>
                 </li>
               ))}
             </ul>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <div className="grid grid-cols-2 gap-3">
-              <img src={IMG.vanity} alt={t('accessibility.imageVanity')} className="aspect-[3/4] w-full rounded-sm object-cover" />
-              <img src={IMG.plans} alt={t('accessibility.imagePlans')} className="mt-8 aspect-[3/4] w-full rounded-sm object-cover" />
-            </div>
           </Reveal>
         </div>
       </section>
@@ -352,40 +356,63 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Feature villa */}
-      <section className="border-b border-border bg-background">
-        <div className="mx-auto grid max-w-7xl items-center gap-0 md:grid-cols-2">
-          <Reveal>
-            <div className="px-5 py-16 md:px-10 md:py-24 lg:px-14">
-              <p className="mb-3 font-sans-body text-[11px] uppercase tracking-[0.28em] text-muted-foreground">{t('featuredVilla.eyebrow')}</p>
-              <h2 className="font-display text-3xl font-medium leading-tight md:text-4xl">
-                {t('featuredVilla.headline')}
-              </h2>
-              <p className="mt-5 font-sans-body text-sm leading-relaxed text-muted-foreground">
-                {t('featuredVilla.body')}
+      {/* Pool Expertise */}
+      <section id="pool-expertise" className="border-b border-border bg-surface py-20 md:py-28">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 md:grid-cols-12 md:gap-16 md:px-8 lg:px-10">
+          <Reveal className="md:col-span-7">
+            <div className="relative">
+              <img src={IMG.pool} alt={t('accessibility.altImagePool')} className="aspect-[4/3] w-full rounded-sm object-cover" />
+              <p className="mt-3 font-sans-body text-[11px] uppercase tracking-wider text-muted-foreground">
+                {t('accessibility.tempImagePool')}
               </p>
-              <a href="#contact" className="mt-8 inline-flex items-center gap-2 font-sans-body text-sm font-medium text-gold transition hover:opacity-80">
-                {t('featuredVilla.cta')} <ArrowUpRight className="h-4 w-4" />
-              </a>
             </div>
           </Reveal>
-          <Reveal delay={0.08}>
-            <img src={IMG.villaPool} alt={t('accessibility.imageVillaPool')} className="h-full min-h-[320px] w-full object-cover md:min-h-[480px]" />
+          <Reveal delay={0.1} className="md:col-span-5">
+            <div className="max-w-md">
+              <p className="mb-4 font-sans-body text-[11px] uppercase tracking-[0.28em] text-muted-foreground">{t('poolExpertise.eyebrow')}</p>
+              <h2 className="font-display text-3xl font-medium leading-tight md:text-4xl">
+                {t('poolExpertise.headline')}
+              </h2>
+              <div className="mt-8 border-l border-gold pl-6">
+                <p className="font-sans-body text-sm leading-relaxed text-foreground">
+                  {t('poolExpertise.body')}
+                </p>
+                <p className="mt-4 font-sans-body text-sm leading-relaxed text-muted-foreground">
+                  {t('poolExpertise.statement')}
+                </p>
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="border-b border-border bg-surface py-14 md:py-16">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-5 md:grid-cols-4 md:px-8 lg:px-10">
-          {Array.isArray(t('stats')) && t('stats').map((principle) => (
-            <div key={principle.label} className="text-center md:text-left">
-              <div className="font-display text-4xl font-medium text-muted-foreground/40 md:text-5xl">
-                {principle.n}
-              </div>
-              <p className="mt-2 font-sans-body text-xs text-foreground uppercase tracking-[0.1em]">{principle.label}</p>
-            </div>
-          ))}
+      {/* Why Construction Company */}
+      <section id="why-construction-company" className="border-b border-border bg-surface py-20 md:py-28">
+        <div className="mx-auto grid max-w-7xl items-start gap-12 px-5 md:grid-cols-12 md:gap-16 md:px-8 lg:px-10">
+          <Reveal className="md:col-span-5 lg:col-span-4">
+            <p className="mb-4 font-sans-body text-[11px] uppercase tracking-[0.28em] text-muted-foreground">{t('whyCompany.eyebrow')}</p>
+            <h2 className="mb-6 font-display text-3xl font-medium leading-tight md:text-4xl">
+              {t('whyCompany.headline')}
+            </h2>
+            <p className="font-sans-body text-sm leading-relaxed text-muted-foreground">
+              {t('whyCompany.intro')}
+            </p>
+          </Reveal>
+          <Reveal delay={0.1} className="md:col-span-7 lg:col-span-8">
+            <ol className="flex flex-col border-t border-border">
+              {Array.isArray(t('whyCompany.items')) && t('whyCompany.items').map((item) => (
+                <li key={item.n} className="flex flex-col gap-2 border-b border-border py-6 sm:flex-row sm:items-start sm:gap-8 md:py-8">
+                  <span className="font-display text-2xl font-medium" style={{ color: '#C8AD78' }}>{item.n}</span>
+                  <div className="flex-1">
+                    <h3 className="font-sans-body text-base font-semibold text-foreground">{item.title}</h3>
+                    <p className="mt-2 font-sans-body text-sm leading-relaxed text-muted-foreground">
+                      {item.description}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </Reveal>
         </div>
       </section>
 
@@ -496,7 +523,7 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="border-t py-14" style={{ backgroundColor: 'var(--footer-bg)', borderColor: 'var(--footer-border)', color: 'var(--footer-text)' }}>
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-4 md:px-8 lg:px-10">
+        <div className="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-3 md:px-8 lg:px-10">
           <div className="md:col-span-1">
             <p className="font-sans-body text-[11px] font-semibold uppercase tracking-[0.28em]">{t('header.company')}</p>
             <p className="mt-4 max-w-xs font-sans-body text-xs leading-relaxed" style={{ color: 'var(--footer-muted)' }}>
@@ -507,22 +534,10 @@ export default function HomePage() {
           <div>
             <p className="mb-3 font-sans-body text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--footer-muted)' }}>{t('footer.explore')}</p>
             <ul className="space-y-2 font-sans-body text-sm">
-              {Array.isArray(nav) && nav.map((n) => (
+              {Array.isArray(nav) && nav.slice(0, 4).map((n) => (
                 <li key={n.href}>
                   <a href={n.href} className="hover:text-gold">
                     {n.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <p className="mb-3 font-sans-body text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--footer-muted)' }}>{t('footer.services')}</p>
-            <ul className="space-y-2 font-sans-body text-sm">
-              {Array.isArray(t('capabilities')) && t('capabilities').map((s) => (
-                <li key={s}>
-                  <a href="#services" className="hover:text-gold">
-                    {s}
                   </a>
                 </li>
               ))}
@@ -543,7 +558,10 @@ export default function HomePage() {
         </div>
         <div className="mx-auto mt-12 flex max-w-7xl flex-col items-start justify-between gap-4 border-t px-5 pt-6 font-sans-body text-[11px] md:flex-row md:items-center md:px-8 lg:px-10" style={{ borderColor: 'var(--footer-border)', color: 'var(--footer-muted)' }}>
           <p>© {new Date().getFullYear()} {t('footer.copyright')}</p>
-          <ThemeToggle />
+          <div className="flex items-center gap-4">
+            <LanguageToggle />
+            <ThemeToggle />
+          </div>
         </div>
       </footer>
     </div>

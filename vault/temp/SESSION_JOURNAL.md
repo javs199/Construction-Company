@@ -272,3 +272,270 @@
 ## 2026-09-26 04:21:36.483Z click
 - element: {"tag":"button","role":null,"ariaLabel":"Change language to Spanish","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ES"}
 
+## 2026-09-26 04:30:15.400Z load
+- url: http://localhost:3000/
+
+## 2026-09-26 04:30:23.402Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Ver proyectos seleccionados"}
+
+## 2026-09-26 04:30:23.402Z navigate
+- url: http://localhost:3000/#projects
+- via: popstate
+
+## 2026-09-26 04:30:29.074Z click
+- element: {"tag":"img","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-26 04:30:29.756Z click
+- element: {"tag":"img","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-26 04:30:30.148Z click
+- element: {"tag":"img","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-26 04:31:18.309Z load
+- url: http://localhost:3000/#projects
+
+## 2026-09-26 04:31:18.326Z navigate
+- url: http://localhost:3000/#projects
+- via: replaceState
+
+## 2026-09-26 04:31:21.979Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Cambiar idioma a inglés","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"EN"}
+
+## 2026-09-26 04:31:23.170Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"EN|ES"}
+
+## 2026-09-26 04:31:23.962Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"EN|ES"}
+
+## 2026-09-26 04:31:24.314Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Change language to Spanish","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ES"}
+
+## 2026-09-26 04:31:24.976Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Cambiar idioma a inglés","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"EN"}
+
+## 2026-09-26 04:31:25.488Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Switch to Dark Mode","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-26 04:31:27.090Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Change language to Spanish","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ES"}
+
+## 2026-09-26 04:31:30.046Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Cambiar a modo claro","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-26 04:31:30.618Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Cambiar idioma a inglés","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"EN"}
+
+## 2026-09-26 04:31:31.511Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Change language to Spanish","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ES"}
+
+## 2026-09-26 04:31:31.912Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Cambiar idioma a inglés","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"EN"}
+
+## 2026-09-26 04:31:32.334Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Change language to Spanish","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ES"}
+
+## 2026-09-26 04:31:34.476Z load
+- url: http://localhost:3000/
+
+## 2026-09-26 04:31:34.544Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-09-26 04:33:29.110Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Change language to Spanish","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ES"}
+
+## 2026-09-26 04:34:58.448Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Cambiar idioma a inglés","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"EN"}
+
+## 2026-09-26 04:38:28.310Z click
+- element: {"tag":"img","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-26 04:38:31.234Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Cambiar idioma a inglés","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"EN"}
+
+## 2026-09-26 04:38:31.916Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Switch to Dark Mode","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-26 04:38:32.998Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Change language to Spanish","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ES"}
+
+## 2026-09-26 04:38:34.730Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Cambiar idioma a inglés","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"EN"}
+
+## 2026-09-26 04:38:36.392Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Switch to Light Mode","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-26 04:38:51.714Z click
+- element: {"tag":"img","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-26 04:38:51.976Z click
+- element: {"tag":"img","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-26 04:38:52.979Z load
+- url: http://localhost:3000/#projects
+
+## 2026-09-26 04:38:52.999Z load
+- url: http://localhost:3000/
+
+## 2026-09-26 04:39:10.760Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"© 2026 Construction CompanyEN|ES"}
+
+## 2026-09-26 04:39:12.432Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"EN|ES"}
+
+## 2026-09-26 04:39:12.714Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Change language to Spanish","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ES"}
+
+## 2026-09-26 04:39:40.271Z navigate
+- url: http://localhost:3000/#about
+- via: popstate
+
+## 2026-09-26 04:40:25.533Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Switch to Dark Mode","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-26 04:40:28.553Z navigate
+- url: http://localhost:3000/#about
+- via: popstate
+
+## 2026-09-26 04:41:03.699Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Change language to Spanish","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ES"}
+
+## 2026-09-26 04:41:07.452Z navigate
+- url: http://localhost:3000/#about
+- via: popstate
+
+## 2026-09-26 04:41:36.545Z navigate
+- url: http://localhost:3000/#about
+- via: popstate
+
+## 2026-09-26 05:14:14.297Z load
+- url: http://localhost:3000/#projects
+
+## 2026-09-26 05:14:21.817Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"EN|ES"}
+
+## 2026-09-26 05:14:22.229Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Cambiar idioma a inglés","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"EN"}
+
+## 2026-09-26 05:16:50.626Z load
+- url: http://localhost:3000/#projects
+
+## 2026-09-26 05:16:50.640Z load
+- url: http://localhost:3000/#about
+
+## 2026-09-26 05:16:50.714Z navigate
+- url: http://localhost:3000/#about
+- via: replaceState
+
+## 2026-09-26 05:17:35.502Z navigate
+- url: http://localhost:3000/#pool-expertise
+- via: popstate
+
+## 2026-09-26 05:18:00.170Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Cambiar idioma a inglés","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"EN"}
+
+## 2026-09-26 05:18:04.569Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"EN|ESDiscuss Your Project"}
+
+## 2026-09-26 05:18:07.888Z navigate
+- url: http://localhost:3000/#pool-expertise
+- via: popstate
+
+## 2026-09-26 05:18:42.603Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Switch to Light Mode","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-26 05:18:47.339Z navigate
+- url: http://localhost:3000/#pool-expertise
+- via: popstate
+
+## 2026-09-26 05:19:04.123Z navigate
+- url: http://localhost:3000/#pool-expertise
+- via: popstate
+
+## 2026-09-26 05:23:12.991Z load
+- url: http://localhost:3000/#pool-expertise
+
+## 2026-09-26 05:23:12.991Z load
+- url: http://localhost:3000/#projects
+
+## 2026-09-26 05:23:13.066Z navigate
+- url: http://localhost:3000/#pool-expertise
+- via: replaceState
+
+## 2026-09-26 05:23:38.906Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"EN|ESDiscuss Your Project"}
+
+## 2026-09-26 05:23:39.297Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Change language to Spanish","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ES"}
+
+## 2026-09-26 05:23:46.490Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Cambiar idioma a español","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ES"}
+
+## 2026-09-26 05:23:46.952Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Cambiar idioma a inglés","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"EN"}
+
+## 2026-09-26 05:23:47.504Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Switch to Dark Mode","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-26 05:23:48.706Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":"top","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ConstructionCompanyProjectsServicesOur ApproachAboutContactEN|ESDiscuss Your ProjectCosta Rica · Design · Build · StewardBuild. Transform.Care forExceptionalProperties.End-to-end construction and property care for owners who expect clarity, craftsmanship, and lasting value in Costa Rica.Discuss Your ProjectView Selected WorkDirectly managed. Locally grounded.Transparent budgets and timelinesDedicated project lead from day oneLuxury ConstructionRemodelingCustom PoolsProperty CareSelected WorkSpaces shaped by vision, place and purpose.A sample of residences and renovations delivered in Costa Rica’s South Pacific.Temporary visual reference — replace with client workProject 01Project name to be added · Location to be confirmed · Project type to be confirmedTemporary visual reference — replace with client workProject 02Project name to be added · Location to be confirmed · Project type to be confirmedTemporary visual reference — replace with client workProject 03Project name to be added · Location to be confirmed · Project type to be confirmedTemporary on-site visual — replace with client photographyA Trusted Local PartnerOne trusted local partner, from construction to long-term care.From the first conversation through construction and ongoing care, every stage is guided through direct communication, personal oversight and coordinated expertise.Direct CommunicationClear conversations and practical updates throughout the work.Personal OversightClose attention to decisions, details and day-to-day coordination.Integrated ExpertiseConstruction, remodeling, pools and property care considered together.Long-Term Property CareSupport designed to continue beyond project completion.CapabilitiesComplete expertise for exceptional properties.01Luxury ConstructionGround-up residences and villas built for Costa Rica’s climate, views, and lifestyle — from structure to finish.02Remodeling & RenovationThoughtful transformations that respect existing character while elevating comfort, light..."}
+
+## 2026-09-26 05:23:49.308Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Confidence, not sales pressureDecisions made with clarity — budgets, timelines, and trade-offs on the table.Whether you are building from abroad or already living in Costa Rica, you get a single point of contact, documented milestones, and honest guidance when scope or site conditions shift."}
+
+## 2026-09-26 05:23:53.860Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Change language to Spanish","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ES"}
+
+## 2026-09-26 05:23:55.084Z navigate
+- url: http://localhost:3000/#why-construction-company
+- via: popstate
+
+## 2026-09-26 05:23:57.944Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Cambiar a modo claro","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-26 05:24:12.795Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Change language to Spanish","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ES"}
+
+## 2026-09-26 05:24:14.704Z navigate
+- url: http://localhost:3000/#why-construction-company
+- via: popstate
+
+## 2026-09-26 05:24:37.153Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Cambiar a modo oscuro","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-26 05:24:40.112Z navigate
+- url: http://localhost:3000/#why-construction-company
+- via: popstate
+
+## 2026-09-26 05:25:00.336Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Cambiar idioma a inglés","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"EN"}
+
+## 2026-09-26 05:25:02.605Z navigate
+- url: http://localhost:3000/#why-construction-company
+- via: popstate
+
+## 2026-09-26 05:25:09.864Z navigate
+- url: http://localhost:3000/#why-construction-company
+- via: popstate
+
+## 2026-09-26 05:25:46.278Z click
+- element: {"tag":"span","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"|"}
+
+## 2026-09-26 05:25:46.630Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Cambiar idioma a inglés","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"EN"}
+
+## 2026-09-26 05:25:47.423Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Switch to Dark Mode","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-26 05:25:54.385Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"EN|ES"}
+
+## 2026-09-26 05:25:54.717Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"EN|ES"}
+
+## 2026-09-26 05:25:56.099Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Change language to Spanish","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ES"}
+
+## 2026-09-26 05:25:57.981Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Cambiar a modo claro","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+

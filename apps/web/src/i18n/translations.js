@@ -40,7 +40,7 @@ const translations = {
     ],
     projects: {
       eyebrow: 'Selected Work',
-      headline: 'Homes shaped by site, light, and craft.',
+      headline: 'Spaces shaped by vision, place and purpose.',
       body: 'A sample of residences and renovations delivered in Costa Rica’s South Pacific.',
       list: [
         {
@@ -57,19 +57,20 @@ const translations = {
         }
       ]
     },
-    about: {
-      eyebrow: 'Our Shared Ambition',
-      headline: 'We treat every commission as a long-term relationship with the land and the people who live there.',
-      body: 'From first sketches to keys and beyond, our team coordinates design, permits, trades, and finishes so you can focus on the life the home will hold — not the logistics of building abroad.',
+    trustedPartner: {
+      eyebrow: 'A Trusted Local Partner',
+      headline: 'One trusted local partner, from construction to long-term care.',
+      body: 'From the first conversation through construction and ongoing care, every stage is guided through direct communication, personal oversight and coordinated expertise.',
       principles: [
-        'Direct owner communication',
-        'Material honesty & climate-smart detailing',
-        'Long-term property care'
+        { title: 'Direct Communication', body: 'Clear conversations and practical updates throughout the work.' },
+        { title: 'Personal Oversight', body: 'Close attention to decisions, details and day-to-day coordination.' },
+        { title: 'Integrated Expertise', body: 'Construction, remodeling, pools and property care considered together.' },
+        { title: 'Long-Term Property Care', body: 'Support designed to continue beyond project completion.' }
       ]
     },
     services: {
       eyebrow: 'Capabilities',
-      headline: 'Complete capacity for exceptional properties.',
+      headline: 'Complete expertise for exceptional properties.',
       list: [
         {
           title: 'Luxury Construction',
@@ -84,31 +85,36 @@ const translations = {
           body: 'One-of-a-kind pools designed around your site, program, and the way you want to live outdoors year-round.',
         },
         {
-          title: 'Property Care',
+          title: 'Property Maintenance',
           body: 'Ongoing stewardship for finished homes — maintenance planning, upgrades, and trusted local coordination.',
         }
       ]
     },
-    featuredVilla: {
-      eyebrow: 'Featured Residence',
-      headline: 'Architecture held by the jungle — and opened to the view.',
-      body: 'A full custom build with infinity edge, indoor-outdoor living, and material choices tuned for humidity, salt air, and long-term ease of care.',
-      cta: 'Request a similar brief'
+    poolExpertise: {
+      eyebrow: 'Custom Pool Expertise',
+      headline: 'Pool expertise, built into the project.',
+      body: 'Pool construction is considered as part of the property, not as an afterthought. Structure, finishes, water systems and the surrounding architecture are coordinated so every element works together.',
+      statement: 'A private pool should feel inseparable from the residence, landscape and way the property is used.'
     },
-    stats: [
-      { label: 'Direct Communication', n: '01' },
-      { label: 'Personal Oversight', n: '02' },
-      { label: 'Integrated Expertise', n: '03' },
-      { label: 'Long-Term Property Care', n: '04' }
-    ],
+    whyCompany: {
+      eyebrow: 'Why Construction Company',
+      headline: 'High standards, clear communication and local care.',
+      intro: 'Thoughtful execution depends on more than craftsmanship. It requires local understanding, clear decisions and close attention throughout the work.',
+      items: [
+        { n: '01', title: 'Local Knowledge', description: 'An understanding of tropical conditions, materials and the realities of building on Costa Rica’s South Pacific.' },
+        { n: '02', title: 'Direct Communication', description: 'Clear conversations, defined next steps and a direct point of contact throughout the project.' },
+        { n: '03', title: 'Integrated Services', description: 'Construction, renovations, custom pools and property care considered as one connected scope.' },
+        { n: '04', title: 'Attention to Detail', description: 'Careful coordination of materials, finishes and the decisions that shape the completed property.' }
+      ]
+    },
     approach: {
       eyebrow: 'How We Work',
-      headline: 'A clear path from first conversation to completion.',
+      headline: 'A personal, transparent path from conversation to completion.',
       phases: [
-        { n: '01', title: 'Discovery', body: 'Site walk, goals, and constraints clarified before a single line is drawn.' },
-        { n: '02', title: 'Design & Budget', body: 'Clear drawings, material direction, and transparent cost planning.' },
-        { n: '03', title: 'Build', body: 'Disciplined construction with regular updates and quality checkpoints.' },
-        { n: '04', title: 'Handover & Care', body: 'Final walkthrough, documentation, and optional long-term property care.' }
+        { n: '01', title: 'Conversation', body: 'Site walk, goals, and constraints clarified before a single line is drawn.' },
+        { n: '02', title: 'Assessment & Proposal', body: 'Clear drawings, material direction, and transparent cost planning.' },
+        { n: '03', title: 'Execution', body: 'Disciplined construction with regular updates and quality checkpoints.' },
+        { n: '04', title: 'Completion & Care', body: 'Final walkthrough, documentation, and optional long-term property care.' }
       ]
     },
     trust: {
@@ -125,9 +131,9 @@ const translations = {
       body: 'Confirmed service locations to be added.'
     },
     finalCta: {
-      headline: 'Let’s build your next chapter.',
-      body: 'Tell us about the site, the timeline, and what “home” means for you. We’ll respond with next steps — not a hard sell.',
-      cta: 'Schedule a Conversation',
+      headline: 'Let’s talk about your property.',
+      body: 'Tell us what you’re planning, building or looking to improve.',
+      cta: 'Discuss Your Project',
       meta: 'construction.company770@gmail.com · Phone / WhatsApp to be added · Uvita, Costa Rica'
     },
     footer: {
@@ -157,7 +163,10 @@ const translations = {
       imageMeeting: 'Team reviewing project plans',
       imageCoast: 'Aerial view of Costa Rica Pacific coastline',
       langEn: 'EN',
-      langEs: 'ES'
+      langEs: 'ES',
+      tempImagePartner: 'Temporary on-site visual — replace with client photography',
+      tempImagePool: 'Temporary pool visual — replace with client photography',
+      altImagePool: 'Temporary visual reference of a private infinity pool integrated into a tropical residence'
     }
   },
   es: {
@@ -202,7 +211,7 @@ const translations = {
     ],
     projects: {
       eyebrow: 'Proyectos Seleccionados',
-      headline: 'Hogares moldeados por el sitio, la luz y la artesanía.',
+      headline: 'Espacios definidos por la visión, el lugar y el propósito.',
       body: 'Una muestra de residencias y renovaciones entregadas en el Pacífico Sur de Costa Rica.',
       list: [
         {
@@ -219,19 +228,20 @@ const translations = {
         }
       ]
     },
-    about: {
-      eyebrow: 'Nuestra Ambición Compartida',
-      headline: 'Tratamos cada encargo como una relación a largo plazo con la tierra y las personas que viven allí.',
-      body: 'Desde los primeros bocetos hasta las llaves y más allá, nuestro equipo coordina diseño, permisos, oficios y acabados para que pueda concentrarse en la vida que albergará el hogar, no en la logística de construir en el extranjero.',
+    trustedPartner: {
+      eyebrow: 'Un socio local de confianza',
+      headline: 'Un solo socio local de confianza, desde la construcción hasta el cuidado a largo plazo.',
+      body: 'Desde la primera conversación hasta la construcción y el cuidado continuo, cada etapa se guía mediante comunicación directa, supervisión personal y experiencia coordinada.',
       principles: [
-        'Comunicación directa con el propietario',
-        'Honestidad material y detalles inteligentes para el clima',
-        'Cuidado de propiedades a largo plazo'
+        { title: 'Comunicación directa', body: 'Conversaciones claras y actualizaciones prácticas durante todo el trabajo.' },
+        { title: 'Supervisión personal', body: 'Atención cercana a las decisiones, los detalles y la coordinación diaria.' },
+        { title: 'Experiencia integral', body: 'Construcción, remodelación, piscinas y cuidado de propiedades considerados en conjunto.' },
+        { title: 'Cuidado de propiedades a largo plazo', body: 'Apoyo pensado para continuar después de finalizar el proyecto.' }
       ]
     },
     services: {
       eyebrow: 'Capacidades',
-      headline: 'Capacidad completa para propiedades excepcionales.',
+      headline: 'Experiencia integral para propiedades excepcionales.',
       list: [
         {
           title: 'Construcción de lujo',
@@ -246,31 +256,36 @@ const translations = {
           body: 'Piscinas únicas diseñadas en torno a su sitio, programa y la forma en que desea vivir al aire libre durante todo el año.',
         },
         {
-          title: 'Cuidado de propiedades',
+          title: 'Mantenimiento de propiedades',
           body: 'Gestión continua para hogares terminados: planificación de mantenimiento, mejoras y coordinación local de confianza.',
         }
       ]
     },
-    featuredVilla: {
-      eyebrow: 'Residencia Destacada',
-      headline: 'Arquitectura sostenida por la selva — y abierta a la vista.',
-      body: 'Una construcción a medida completa con borde infinito, vida interior-exterior y elecciones de materiales ajustadas para la humedad, el aire salado y la facilidad de cuidado a largo plazo.',
-      cta: 'Solicitar un proyecto similar'
+    poolExpertise: {
+      eyebrow: 'Experiencia en piscinas a medida',
+      headline: 'Experiencia en piscinas, integrada al proyecto.',
+      body: 'La construcción de la piscina se considera como parte de la propiedad, no como un elemento añadido al final. La estructura, los acabados, los sistemas de agua y la arquitectura circundante se coordinan para que cada elemento funcione en conjunto.',
+      statement: 'Una piscina privada debe sentirse inseparable de la residencia, el paisaje y la forma en que se utiliza la propiedad.'
     },
-    stats: [
-      { label: 'Comunicación directa', n: '01' },
-      { label: 'Supervisión personal', n: '02' },
-      { label: 'Experiencia integral', n: '03' },
-      { label: 'Cuidado de propiedades a largo plazo', n: '04' }
-    ],
+    whyCompany: {
+      eyebrow: 'Por qué Construction Company',
+      headline: 'Altos estándares, comunicación clara y cuidado local.',
+      intro: 'Una ejecución cuidadosa depende de más que la calidad del trabajo. Requiere conocimiento local, decisiones claras y atención cercana durante todo el proceso.',
+      items: [
+        { n: '01', title: 'Conocimiento local', description: 'Comprensión de las condiciones tropicales, los materiales y las realidades de construir en el Pacífico Sur de Costa Rica.' },
+        { n: '02', title: 'Comunicación directa', description: 'Conversaciones claras, próximos pasos definidos y un punto de contacto directo durante todo el proyecto.' },
+        { n: '03', title: 'Servicios integrados', description: 'Construcción, remodelaciones, piscinas a medida y cuidado de propiedades considerados como un alcance conectado.' },
+        { n: '04', title: 'Atención al detalle', description: 'Coordinación cuidadosa de materiales, acabados y decisiones que dan forma a la propiedad terminada.' }
+      ]
+    },
     approach: {
       eyebrow: 'Cómo Trabajamos',
-      headline: 'Un camino claro desde la primera conversación hasta la finalización.',
+      headline: 'Un camino personal y transparente, desde la conversación hasta la finalización.',
       phases: [
-        { n: '01', title: 'Descubrimiento', body: 'Recorrido del sitio, objetivos y restricciones aclarados antes de dibujar una sola línea.' },
-        { n: '02', title: 'Diseño y Presupuesto', body: 'Planos claros, dirección de materiales y planificación transparente de costos.' },
-        { n: '03', title: 'Construcción', body: 'Construcción disciplinada con actualizaciones regulares y puntos de control de calidad.' },
-        { n: '04', title: 'Entrega y Cuidado', body: 'Recorrido final, documentación y cuidado de propiedades a largo plazo opcional.' }
+        { n: '01', title: 'Conversación', body: 'Recorrido del sitio, objetivos y restricciones aclarados antes de dibujar una sola línea.' },
+        { n: '02', title: 'Evaluación y propuesta', body: 'Planos claros, dirección de materiales y planificación transparente de costos.' },
+        { n: '03', title: 'Ejecución', body: 'Construcción disciplinada con actualizaciones regulares y puntos de control de calidad.' },
+        { n: '04', title: 'Finalización y cuidado', body: 'Recorrido final, documentación y cuidado de propiedades a largo plazo opcional.' }
       ]
     },
     trust: {
@@ -287,9 +302,9 @@ const translations = {
       body: 'Zonas de servicio confirmadas pendientes.'
     },
     finalCta: {
-      headline: 'Construyamos su próximo capítulo.',
-      body: 'Cuéntenos sobre la propiedad, los plazos y lo que significa “hogar” para usted. Le responderemos con los próximos pasos, sin presiones de venta.',
-      cta: 'Agendar una conversación',
+      headline: 'Hablemos de su propiedad.',
+      body: 'Cuéntenos qué está planificando, construyendo o buscando mejorar.',
+      cta: 'Hablemos de su proyecto',
       meta: 'construction.company770@gmail.com · Teléfono / WhatsApp pendiente · Uvita, Costa Rica'
     },
     footer: {
@@ -319,7 +334,10 @@ const translations = {
       imageMeeting: 'Equipo revisando planos del proyecto',
       imageCoast: 'Vista aérea de la costa del Pacífico de Costa Rica',
       langEn: 'EN',
-      langEs: 'ES'
+      langEs: 'ES',
+      tempImagePartner: 'Referencia visual temporal en obra — reemplazar con fotografías del cliente',
+      tempImagePool: 'Referencia visual temporal de piscina — reemplazar con fotografías del cliente',
+      altImagePool: 'Referencia visual temporal de una piscina infinita privada integrada a una residencia tropical'
     }
   }
 };

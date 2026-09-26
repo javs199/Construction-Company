@@ -58,6 +58,12 @@ body {
     --footer-text: #F7F4EE;
     --footer-muted: #BEB8AC;
     --footer-border: #30302E;
+
+    --tp-bg: #E8DECA;
+    --tp-text: #171614;
+    --tp-muted: #6E6961;
+    --tp-border: #D6CEC0;
+    --tp-accent: #C8AD78;
   }
 
   .dark {
@@ -107,6 +113,12 @@ body {
     --footer-text: #F3EFE7;
     --footer-muted: #8E887E;
     --footer-border: #30302E;
+
+    --tp-bg: #1E1B17;
+    --tp-text: #F3EFE7;
+    --tp-muted: #BEB8AC;
+    --tp-border: #30302E;
+    --tp-accent: #C8AD78;
   }
 
   * {
