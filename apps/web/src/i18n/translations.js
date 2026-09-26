@@ -117,10 +117,11 @@ const translations = {
         { n: '04', title: 'Completion & Care', body: 'Final walkthrough, documentation, and optional long-term property care.' }
       ]
     },
-    trust: {
-      eyebrow: 'Confidence, not sales pressure',
-      headline: 'Decisions made with clarity — budgets, timelines, and trade-offs on the table.',
-      body: 'Whether you are building from abroad or already living in Costa Rica, you get a single point of contact, documented milestones, and honest guidance when scope or site conditions shift.'
+    remoteOwners: {
+      eyebrow: 'Remote Owners & Investors',
+      headline: 'Confidence, even when you’re away.',
+      body: 'Whether you are building, improving or caring for a property from abroad, communication and local oversight should remain clear, personal and easy to follow.',
+      statement: 'Your property. One trusted local partner.'
     },
     testimonial: {
       quote: 'Verified client testimonial to be added',
@@ -166,7 +167,11 @@ const translations = {
       langEs: 'ES',
       tempImagePartner: 'Temporary on-site visual — replace with client photography',
       tempImagePool: 'Temporary pool visual — replace with client photography',
-      altImagePool: 'Temporary visual reference of a private infinity pool integrated into a tropical residence'
+      altImagePool: 'Temporary visual reference of a private infinity pool integrated into a tropical residence',
+      tempImageRemotePrimary: 'Temporary coastal residence visual — replace with client photography',
+      tempImageRemoteSecondary: 'Project-update image placeholder',
+      altImageRemotePrimary: 'Temporary visual reference of a private tropical residence overlooking Costa Rica’s South Pacific',
+      altImageRemoteSecondary: 'Temporary project-update reference showing architectural plans and site coordination'
     }
   },
   es: {
@@ -288,10 +293,11 @@ const translations = {
         { n: '04', title: 'Finalización y cuidado', body: 'Recorrido final, documentación y cuidado de propiedades a largo plazo opcional.' }
       ]
     },
-    trust: {
-      eyebrow: 'Confianza, sin presiones de venta',
-      headline: 'Decisiones tomadas con claridad — presupuestos, plazos y concesiones sobre la mesa.',
-      body: 'Ya sea que esté construyendo desde el extranjero o ya viva en Costa Rica, obtendrá un único punto de contacto, hitos documentados y orientación honesta cuando el alcance o las condiciones del sitio cambien.'
+    remoteOwners: {
+      eyebrow: 'Propietarios remotos e inversionistas',
+      headline: 'Confianza, incluso cuando está lejos.',
+      body: 'Ya sea que esté construyendo, mejorando o cuidando una propiedad desde el extranjero, la comunicación y la supervisión local deben mantenerse claras, personales y fáciles de seguir.',
+      statement: 'Su propiedad. Un solo socio local de confianza.'
     },
     testimonial: {
       quote: 'Testimonio verificado de cliente pendiente',
@@ -337,7 +343,11 @@ const translations = {
       langEs: 'ES',
       tempImagePartner: 'Referencia visual temporal en obra — reemplazar con fotografías del cliente',
       tempImagePool: 'Referencia visual temporal de piscina — reemplazar con fotografías del cliente',
-      altImagePool: 'Referencia visual temporal de una piscina infinita privada integrada a una residencia tropical'
+      altImagePool: 'Referencia visual temporal de una piscina infinita privada integrada a una residencia tropical',
+      tempImageRemotePrimary: 'Referencia visual temporal de residencia costera — reemplazar con fotografías del cliente',
+      tempImageRemoteSecondary: 'Imagen temporal de actualización del proyecto',
+      altImageRemotePrimary: 'Referencia visual temporal de una residencia tropical privada con vista al Pacífico Sur de Costa Rica',
+      altImageRemoteSecondary: 'Referencia temporal de seguimiento de proyecto con planos arquitectónicos y coordinación de obra'
     }
   }
 };

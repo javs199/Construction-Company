@@ -439,30 +439,41 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Trust / meeting */}
-      <section className="border-b border-border bg-surface py-20 md:py-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 md:grid-cols-2 md:px-8 lg:px-10">
-          <Reveal>
-            <div className="relative">
-              <img src={IMG.forest} alt={t('accessibility.imageForest')} className="aspect-[16/10] w-full rounded-sm object-cover" />
-              <div className="absolute -bottom-6 right-4 w-[70%] overflow-hidden rounded-sm border border-border shadow-xl sm:right-8">
-                <img src={IMG.meeting} alt={t('accessibility.imageMeeting')} className="aspect-video w-full object-cover" />
+      {/* Remote Owners & Investors */}
+      <section id="remote-owners" className="border-b border-border py-20 md:py-28" style={{ backgroundColor: 'var(--tp-bg)', color: 'var(--tp-text)' }}>
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 md:grid-cols-12 md:gap-16 md:px-8 lg:px-10">
+          <Reveal className="md:col-span-5">
+            <div className="max-w-md md:pr-4">
+              <p className="mb-4 font-sans-body text-[11px] uppercase tracking-[0.28em]" style={{ color: 'var(--tp-muted)' }}>{t('remoteOwners.eyebrow')}</p>
+              <h2 className="mb-6 font-display text-3xl font-medium leading-tight md:text-4xl">
+                {t('remoteOwners.headline')}
+              </h2>
+              <p className="font-sans-body text-sm leading-relaxed" style={{ color: 'var(--tp-muted)' }}>
+                {t('remoteOwners.body')}
+              </p>
+              <div className="mt-8 border-l pl-6" style={{ borderColor: 'var(--tp-accent)' }}>
+                <p className="font-sans-body text-sm font-medium leading-relaxed">
+                  {t('remoteOwners.statement')}
+                </p>
               </div>
             </div>
           </Reveal>
-          <Reveal delay={0.1}>
-            <div className="md:pl-6 lg:pl-10">
-              <p className="mb-3 font-sans-body text-[11px] uppercase tracking-[0.28em] text-muted-foreground">{t('trust.eyebrow')}</p>
-              <h2 className="font-display text-3xl font-medium md:text-4xl">
-                {t('trust.headline')}
-              </h2>
-              <p className="mt-5 font-sans-body text-sm leading-relaxed text-muted-foreground">
-                {t('trust.body')}
+          <Reveal delay={0.1} className="md:col-span-7">
+            <div className="relative">
+              <img src={IMG.villaPool} alt={t('accessibility.altImageRemotePrimary')} className="aspect-[4/3] w-full rounded-sm object-cover" />
+              <p className="mt-3 font-sans-body text-[11px] uppercase tracking-wider" style={{ color: 'var(--tp-muted)' }}>
+                {t('accessibility.tempImageRemotePrimary')}
               </p>
+              
+              <div className="mt-8 w-full md:absolute md:-bottom-12 md:-left-12 md:mt-0 md:w-[60%] lg:-left-16 lg:-bottom-16">
+                <img src={IMG.meeting} alt={t('accessibility.altImageRemoteSecondary')} className="aspect-[4/3] w-full rounded-sm object-cover md:border-8" style={{ borderColor: 'var(--tp-bg)' }} />
+                <p className="mt-2 font-sans-body text-[10px] uppercase tracking-wider" style={{ color: 'var(--tp-muted)' }}>
+                  {t('accessibility.tempImageRemoteSecondary')}
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>
-        <div className="h-8 md:h-10" />
       </section>
 
       {/* Testimonial */}

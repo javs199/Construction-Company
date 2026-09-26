@@ -539,3 +539,28 @@
 ## 2026-09-26 05:25:57.981Z click
 - element: {"tag":"button","role":null,"ariaLabel":"Cambiar a modo claro","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
 
+## 2026-09-26 05:37:41.353Z load
+- url: http://localhost:3000/#projects
+
+## 2026-09-26 05:37:41.379Z load
+- url: http://localhost:3000/#why-construction-company
+
+## 2026-09-26 05:37:41.450Z navigate
+- url: http://localhost:3000/#why-construction-company
+- via: replaceState
+
+## 2026-09-26 05:38:34.752Z navigate
+- url: http://localhost:3000/#remote-owners
+- via: popstate
+
+## 2026-09-26 05:38:49.053Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Change language to Spanish","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ES"}
+
+## 2026-09-26 05:38:51.797Z navigate
+- url: http://localhost:3000/#remote-owners
+- via: popstate
+
+## 2026-09-26 05:39:01.562Z navigate
+- url: http://localhost:3000/#remote-owners
+- via: popstate
+
