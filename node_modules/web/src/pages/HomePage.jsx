@@ -1,0 +1,551 @@
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
+import { useTheme } from 'next-themes';
+import { Menu, X, Moon, Sun, ArrowUpRight, Check } from 'lucide-react';
+import Reveal from '@/components/Reveal';
+import CountUp from '@/components/CountUp';
+import Seo from '@/components/Seo';
+import { cn } from '@/lib/utils';
+import { useLanguage } from '@/i18n/LanguageContext';
+
+const IMG = {
+  hero: 'https://images.hostinger.com/b45d5566-e15c-497d-9d55-9d2e0d0bb577.png',
+  pool: 'https://images.hostinger.com/b2c03542-d035-40ff-b2ef-f357d60eed3f.png',
+  architect: 'https://images.hostinger.com/6e51037b-acff-4d87-9fa8-6ec211887b5a.png',
+  villaBw: 'https://images.hostinger.com/840c78ba-08e9-4786-a523-decd4b04715c.png',
+  bathBw: 'https://images.hostinger.com/3367f020-0354-45fb-9ca9-328c74af7d31.png',
+  terraceBw: 'https://images.hostinger.com/adad3f06-f110-4552-902c-6500c50e2c55.png',
+  vanity: 'https://images.hostinger.com/7d3532cd-88ed-42bc-8527-be3d7a432224.png',
+  plans: 'https://images.hostinger.com/2493da16-6c92-451d-946a-013eb903bc4d.png',
+  villaPool: 'https://images.hostinger.com/2bb55de1-2bb4-4f1d-971b-43ee4e4e0386.png',
+  forest: 'https://images.hostinger.com/fb02c309-1e42-43d4-804d-f7088b6f261f.png',
+  meeting: 'https://images.hostinger.com/928533e3-7039-438f-80c8-798c9ec6df9f.png',
+  coast: 'https://images.hostinger.com/c0f2c670-85a7-498a-abe8-e6f1e3fd36de.png',
+};
+
+function LanguageToggle({ className }) {
+  const { language, setLanguage, t } = useLanguage();
+  return (
+    <div className={cn("flex items-center gap-1.5 font-sans-body text-[11px] font-medium tracking-wide", className)}>
+      <button
+        type="button"
+        onClick={() => setLanguage('en')}
+        aria-pressed={language === 'en'}
+        lang="en"
+        className={language === 'en' ? 'text-foreground' : 'text-muted-foreground hover:text-foreground transition'}
+        aria-label={t('accessibility.changeToEnglish')}
+      >
+        {t('accessibility.langEn')}
+      </button>
+      <span aria-hidden="true" className="opacity-40 text-muted-foreground">|</span>
+      <button
+        type="button"
+        onClick={() => setLanguage('es')}
+        aria-pressed={language === 'es'}
+        lang="es"
+        className={language === 'es' ? 'text-foreground' : 'text-muted-foreground hover:text-foreground transition'}
+        aria-label={t('accessibility.changeToSpanish')}
+      >
+        {t('accessibility.langEs')}
+      </button>
+    </div>
+  );
+}
+
+function ThemeToggle({ className }) {
+  const { resolvedTheme, setTheme } = useTheme();
+  const { t } = useLanguage();
+  const isDark = resolvedTheme === 'dark';
+  return (
+    <button
+      type="button"
+      aria-label={isDark ? t('accessibility.switchToLight') : t('accessibility.switchToDark')}
+      onClick={() => setTheme(isDark ? 'light' : 'dark')}
+      className={cn(
+        'inline-flex h-10 w-10 items-center justify-center rounded-full border border-border/80 bg-background/60 text-foreground transition hover:border-primary/50 hover:text-primary',
+        className,
+      )}
+    >
+      {isDark ? <Sun className="h-4 w-4" strokeWidth={1.5} /> : <Moon className="h-4 w-4" strokeWidth={1.5} />}
+    </button>
+  );
+}
+
+function Header() {
+  const [open, setOpen] = useState(false);
+  const { t } = useLanguage();
+  const nav = t('navigation');
+  return (
+    <header className="absolute inset-x-0 top-0 z-50">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5 md:px-8 lg:px-10">
+        <a href="#top" className="font-sans-body text-[11px] font-semibold uppercase tracking-[0.28em] text-foreground">
+          {t('header.company')}
+          <span className="block tracking-[0.32em] text-muted-foreground">{t('header.descriptor')}</span>
+        </a>
+        <nav className="hidden items-center gap-8 lg:flex">
+          {Array.isArray(nav) && nav.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="font-sans-body text-[12px] font-medium tracking-wide text-muted-foreground transition hover:text-foreground"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+        <div className="flex items-center gap-2 sm:gap-3">
+          <LanguageToggle className="hidden sm:flex mr-2" />
+          <ThemeToggle />
+          <a
+            href="#contact"
+            className="hidden rounded-sm bg-primary px-5 py-2.5 font-sans-body text-[12px] font-medium tracking-wide text-primary-foreground transition hover:opacity-90 sm:inline-flex"
+          >
+            {t('hero.ctaDiscuss')}
+          </a>
+          <button
+            type="button"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border lg:hidden"
+            aria-label={open ? t('accessibility.closeMenu') : t('accessibility.openMenu')}
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+          </button>
+        </div>
+      </div>
+      {open && (
+        <div className="border-t border-border bg-background/95 px-5 py-6 backdrop-blur-md lg:hidden">
+          <div className="flex flex-col gap-4">
+            <LanguageToggle className="mb-2" />
+            {Array.isArray(nav) && nav.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className="font-sans-body text-sm text-foreground"
+              >
+                {item.label}
+              </a>
+            ))}
+            <a
+              href="#contact"
+              onClick={() => setOpen(false)}
+              className="mt-2 inline-flex justify-center rounded-sm bg-primary px-5 py-3 text-sm text-primary-foreground"
+            >
+              {t('hero.ctaDiscuss')}
+            </a>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+}
+
+export default function HomePage() {
+  const { t } = useLanguage();
+  const projectsList = t('projects.list');
+  const servicesList = t('services.list');
+  const approachPhases = t('approach.phases');
+  const nav = t('navigation');
+  
+  const projectImgs = [IMG.villaBw, IMG.bathBw, IMG.terraceBw];
+  const projectSpans = ['md:col-span-1', 'md:col-span-1', 'md:col-span-2 lg:col-span-1'];
+
+  return (
+    <div id="top" className="min-h-[100dvh] bg-background text-foreground">
+      <Helmet>
+        <title>{t('seo.title')}</title>
+        <meta name="description" content={t('seo.description')} />
+      </Helmet>
+      <Seo
+        title={t('seo.title')}
+        description={t('seo.description')}
+        siteName={t('header.company')}
+      />
+
+      <Header />
+
+      {/* Hero */}
+      <section className="relative overflow-hidden border-b border-border bg-background pt-28 md:pt-32">
+        <div className="mx-auto grid max-w-7xl gap-10 px-5 pb-16 md:grid-cols-12 md:gap-8 md:px-8 md:pb-24 lg:px-10">
+          <div className="flex flex-col justify-center md:col-span-5 lg:col-span-5">
+            <Reveal>
+              <p className="mb-5 font-sans-body text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
+                {t('hero.eyebrow')}
+              </p>
+              <h1 className="font-display text-[2.75rem] font-medium leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-[3.5rem]">
+                {Array.isArray(t('hero.headline')) && t('hero.headline').map((frag, idx) => (
+                  <React.Fragment key={idx}>
+                    {frag.accent ? (
+                      <span className="italic text-gold">{frag.text}</span>
+                    ) : (
+                      frag.text
+                    )}
+                    {frag.br && <br />}
+                  </React.Fragment>
+                ))}
+              </h1>
+              <p className="mt-6 max-w-md font-sans-body text-sm leading-relaxed text-muted-foreground md:text-[15px]">
+                {t('hero.supporting')}
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-2 rounded-sm bg-primary px-6 py-3 font-sans-body text-[13px] font-medium text-primary-foreground transition hover:opacity-90 active:scale-[0.98]"
+                >
+                  {t('hero.ctaDiscuss')}
+                </a>
+                <a
+                  href="#projects"
+                  className="inline-flex items-center gap-2 rounded-sm border border-border bg-transparent px-6 py-3 font-sans-body text-[13px] font-medium text-foreground transition hover:border-foreground/40"
+                >
+                  {t('hero.ctaView')}
+                </a>
+              </div>
+              <ul className="mt-10 space-y-2.5 font-sans-body text-[12px] text-muted-foreground">
+                {Array.isArray(t('hero.trustMarkers')) && t('hero.trustMarkers').map((m) => (
+                  <li key={m} className="flex items-start gap-2">
+                    <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold" strokeWidth={2} />
+                    {m}
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          </div>
+          <div className="md:col-span-7 lg:col-span-7">
+            <Reveal delay={0.1}>
+              <div className="relative">
+                <div className="overflow-hidden rounded-sm">
+                  <img src={IMG.hero} alt={t('accessibility.imageHero')} className="aspect-[16/10] w-full object-cover" />
+                </div>
+                <div className="mt-3 grid grid-cols-2 gap-3 sm:absolute sm:-bottom-8 sm:right-0 sm:mt-0 sm:w-[55%] sm:grid-cols-2">
+                  <div className="overflow-hidden rounded-sm border border-border/60 shadow-lg">
+                    <img src={IMG.pool} alt={t('accessibility.imagePool')} className="aspect-[4/3] w-full object-cover" />
+                  </div>
+                  <div className="overflow-hidden rounded-sm border border-border/60 shadow-lg">
+                    <img src={IMG.architect} alt={t('accessibility.imageArchitect')} className="aspect-[4/3] w-full object-cover object-top" />
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+        <div className="h-10 md:h-16" />
+      </section>
+
+      {/* Service tabs strip */}
+      <section className="border-b border-border bg-surface">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-border md:grid-cols-4">
+          {Array.isArray(t('capabilities')) && t('capabilities').map((label) => (
+            <a
+              key={label}
+              href="#services"
+              className="px-4 py-5 text-center font-sans-body text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground transition hover:bg-background hover:text-foreground md:py-6 md:text-xs"
+            >
+              {label}
+            </a>
+          ))}
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section id="projects" className="border-b border-border bg-background py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-5 md:px-8 lg:px-10">
+          <Reveal>
+            <div className="mb-12 flex flex-col gap-4 md:mb-16 md:flex-row md:items-end md:justify-between">
+              <div>
+                <p className="mb-3 font-sans-body text-[11px] uppercase tracking-[0.28em] text-muted-foreground">{t('projects.eyebrow')}</p>
+                <h2 className="font-display text-3xl font-medium tracking-tight md:text-4xl lg:text-[2.75rem]">
+                  {t('projects.headline')}
+                </h2>
+              </div>
+              <p className="max-w-sm font-sans-body text-sm text-muted-foreground">
+                {t('projects.body')}
+              </p>
+            </div>
+          </Reveal>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {Array.isArray(projectsList) && projectsList.map((p, i) => (
+              <Reveal key={p.title} delay={i * 0.08}>
+                <article className="group">
+                  <div className="overflow-hidden rounded-sm bg-muted relative">
+                    <img
+                      src={projectImgs[i]}
+                      alt={p.title}
+                      className="aspect-[4/3] w-full object-cover grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0"
+                    />
+                    <div className="absolute bottom-2 left-2 right-2 rounded bg-background/80 px-2 py-1 text-center font-sans-body text-[10px] text-foreground backdrop-blur-sm">
+                      {t('accessibility.tempVisualRef')}
+                    </div>
+                  </div>
+                  <div className="mt-4 flex items-start justify-between gap-3">
+                    <div>
+                      <h3 className="font-display text-xl font-medium">{p.title}</h3>
+                      <p className="mt-1 font-sans-body text-xs text-muted-foreground">{p.meta}</p>
+                    </div>
+                    <ArrowUpRight className="mt-1 h-4 w-4 shrink-0 text-muted-foreground transition group-hover:text-gold" strokeWidth={1.5} />
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Story split */}
+      <section id="about" className="border-b border-border bg-surface py-20 md:py-28">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 md:grid-cols-2 md:gap-16 md:px-8 lg:px-10">
+          <Reveal>
+            <p className="mb-3 font-sans-body text-[11px] uppercase tracking-[0.28em] text-muted-foreground">{t('about.eyebrow')}</p>
+            <h2 className="font-display text-3xl font-medium leading-tight md:text-4xl">
+              {t('about.headline')}
+            </h2>
+            <p className="mt-6 font-sans-body text-sm leading-relaxed text-muted-foreground">
+              {t('about.body')}
+            </p>
+            <ul className="mt-8 space-y-3 font-sans-body text-sm text-foreground">
+              {Array.isArray(t('about.principles')) && t('about.principles').map((m) => (
+                <li key={m} className="flex items-center gap-3 border-b border-border/70 pb-3">
+                  <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+                  {m}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div className="grid grid-cols-2 gap-3">
+              <img src={IMG.vanity} alt={t('accessibility.imageVanity')} className="aspect-[3/4] w-full rounded-sm object-cover" />
+              <img src={IMG.plans} alt={t('accessibility.imagePlans')} className="mt-8 aspect-[3/4] w-full rounded-sm object-cover" />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Services detail */}
+      <section id="services" className="border-b border-border bg-background py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-5 md:px-8 lg:px-10">
+          <Reveal>
+            <p className="mb-3 font-sans-body text-[11px] uppercase tracking-[0.28em] text-muted-foreground">{t('services.eyebrow')}</p>
+            <h2 className="mb-12 max-w-xl font-display text-3xl font-medium md:mb-16 md:text-4xl">
+              {t('services.headline')}
+            </h2>
+          </Reveal>
+          <div className="grid gap-0 border-t border-border md:grid-cols-2">
+            {Array.isArray(servicesList) && servicesList.map((s, i) => (
+              <Reveal key={s.title} delay={i * 0.05}>
+                <div
+                  className={cn(
+                    'flex min-h-[200px] flex-col justify-between gap-6 border-b border-border p-6 md:p-8',
+                    i % 2 === 0 && 'md:border-r',
+                  )}
+                >
+                  <div className="flex h-24 w-full items-end justify-end bg-surface">
+                    <span className="p-4 font-display text-4xl text-muted-foreground/40">0{i + 1}</span>
+                  </div>
+                  <div>
+                    <h3 className="font-display text-2xl font-medium">{s.title}</h3>
+                    <p className="mt-3 max-w-md font-sans-body text-sm leading-relaxed text-muted-foreground">{s.body}</p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Feature villa */}
+      <section className="border-b border-border bg-background">
+        <div className="mx-auto grid max-w-7xl items-center gap-0 md:grid-cols-2">
+          <Reveal>
+            <div className="px-5 py-16 md:px-10 md:py-24 lg:px-14">
+              <p className="mb-3 font-sans-body text-[11px] uppercase tracking-[0.28em] text-muted-foreground">{t('featuredVilla.eyebrow')}</p>
+              <h2 className="font-display text-3xl font-medium leading-tight md:text-4xl">
+                {t('featuredVilla.headline')}
+              </h2>
+              <p className="mt-5 font-sans-body text-sm leading-relaxed text-muted-foreground">
+                {t('featuredVilla.body')}
+              </p>
+              <a href="#contact" className="mt-8 inline-flex items-center gap-2 font-sans-body text-sm font-medium text-gold transition hover:opacity-80">
+                {t('featuredVilla.cta')} <ArrowUpRight className="h-4 w-4" />
+              </a>
+            </div>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <img src={IMG.villaPool} alt={t('accessibility.imageVillaPool')} className="h-full min-h-[320px] w-full object-cover md:min-h-[480px]" />
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="border-b border-border bg-surface py-14 md:py-16">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-5 md:grid-cols-4 md:px-8 lg:px-10">
+          {Array.isArray(t('stats')) && t('stats').map((principle) => (
+            <div key={principle.label} className="text-center md:text-left">
+              <div className="font-display text-4xl font-medium text-muted-foreground/40 md:text-5xl">
+                {principle.n}
+              </div>
+              <p className="mt-2 font-sans-body text-xs text-foreground uppercase tracking-[0.1em]">{principle.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Approach */}
+      <section id="approach" className="border-b border-border bg-background py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-5 md:px-8 lg:px-10">
+          <Reveal>
+            <p className="mb-3 font-sans-body text-[11px] uppercase tracking-[0.28em] text-muted-foreground">{t('approach.eyebrow')}</p>
+            <h2 className="mb-12 max-w-lg font-display text-3xl font-medium md:mb-16 md:text-4xl">
+              {t('approach.headline')}
+            </h2>
+          </Reveal>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {Array.isArray(approachPhases) && approachPhases.map((ph, i) => (
+              <Reveal key={ph.n} delay={i * 0.06}>
+                <div className="border-t border-gold/40 pt-5">
+                  <p className="font-sans-body text-[11px] tracking-[0.2em] text-gold">{ph.n}</p>
+                  <h3 className="mt-3 font-display text-xl font-medium">{ph.title}</h3>
+                  <p className="mt-2 font-sans-body text-sm leading-relaxed text-muted-foreground">{ph.body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trust / meeting */}
+      <section className="border-b border-border bg-surface py-20 md:py-24">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 md:grid-cols-2 md:px-8 lg:px-10">
+          <Reveal>
+            <div className="relative">
+              <img src={IMG.forest} alt={t('accessibility.imageForest')} className="aspect-[16/10] w-full rounded-sm object-cover" />
+              <div className="absolute -bottom-6 right-4 w-[70%] overflow-hidden rounded-sm border border-border shadow-xl sm:right-8">
+                <img src={IMG.meeting} alt={t('accessibility.imageMeeting')} className="aspect-video w-full object-cover" />
+              </div>
+            </div>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div className="md:pl-6 lg:pl-10">
+              <p className="mb-3 font-sans-body text-[11px] uppercase tracking-[0.28em] text-muted-foreground">{t('trust.eyebrow')}</p>
+              <h2 className="font-display text-3xl font-medium md:text-4xl">
+                {t('trust.headline')}
+              </h2>
+              <p className="mt-5 font-sans-body text-sm leading-relaxed text-muted-foreground">
+                {t('trust.body')}
+              </p>
+            </div>
+          </Reveal>
+        </div>
+        <div className="h-8 md:h-10" />
+      </section>
+
+      {/* Testimonial */}
+      <section className="border-b border-border bg-background py-20 md:py-28">
+        <div className="mx-auto max-w-3xl px-5 text-center md:px-8">
+          <Reveal>
+            <div className="mx-auto mb-8 flex h-8 w-8 items-center justify-center">
+              <span className="block h-2 w-2 rotate-45 bg-gold" />
+            </div>
+            <blockquote className="font-display text-2xl font-medium leading-snug text-foreground md:text-3xl lg:text-[2.15rem]">
+              {t('testimonial.quote')}
+            </blockquote>
+            <p className="mt-8 font-sans-body text-xs uppercase tracking-[0.22em] text-muted-foreground">
+              {t('testimonial.meta')}
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Location */}
+      <section className="border-b border-border bg-background">
+        <div className="relative">
+          <img src={IMG.coast} alt={t('accessibility.imageCoast')} className="aspect-[21/9] max-h-[420px] w-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 px-5 pb-10 text-center md:px-8">
+            <p className="font-sans-body text-[11px] uppercase tracking-[0.3em] text-foreground/90">
+              {t('location.headline')}
+            </p>
+            <p className="mt-2 font-sans-body text-[11px] text-foreground/70">
+              {t('location.body')}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section id="contact" className="py-20 md:py-28" style={{ backgroundColor: 'var(--final-cta-bg)', color: 'var(--final-cta-text)' }}>
+        <div className="mx-auto max-w-2xl px-5 text-center md:px-8">
+          <Reveal>
+            <h2 className="font-display text-3xl font-medium md:text-4xl lg:text-5xl" style={{ color: 'var(--final-cta-text)' }}>
+              {t('finalCta.headline')}
+            </h2>
+            <p className="mx-auto mt-5 max-w-md font-sans-body text-sm leading-relaxed" style={{ color: 'var(--final-cta-muted)' }}>
+              {t('finalCta.body')}
+            </p>
+            <a
+              href="mailto:construction.company770@gmail.com"
+              className="mt-10 inline-flex rounded-sm px-8 py-3.5 font-sans-body text-[13px] font-medium transition active:scale-[0.98] bg-[var(--final-cta-button-bg)] text-[var(--final-cta-button-text)] hover:bg-[var(--final-cta-button-hover-bg)] hover:text-[var(--final-cta-button-hover-text)]"
+            >
+              {t('finalCta.cta')}
+            </a>
+            <p className="mt-8 font-sans-body text-xs" style={{ color: 'var(--final-cta-muted)' }}>
+              {t('finalCta.meta')}
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t py-14" style={{ backgroundColor: 'var(--footer-bg)', borderColor: 'var(--footer-border)', color: 'var(--footer-text)' }}>
+        <div className="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-4 md:px-8 lg:px-10">
+          <div className="md:col-span-1">
+            <p className="font-sans-body text-[11px] font-semibold uppercase tracking-[0.28em]">{t('header.company')}</p>
+            <p className="mt-4 max-w-xs font-sans-body text-xs leading-relaxed" style={{ color: 'var(--footer-muted)' }}>
+              {t('footer.desc')}<br />
+              {t('footer.location')}
+            </p>
+          </div>
+          <div>
+            <p className="mb-3 font-sans-body text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--footer-muted)' }}>{t('footer.explore')}</p>
+            <ul className="space-y-2 font-sans-body text-sm">
+              {Array.isArray(nav) && nav.map((n) => (
+                <li key={n.href}>
+                  <a href={n.href} className="hover:text-gold">
+                    {n.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="mb-3 font-sans-body text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--footer-muted)' }}>{t('footer.services')}</p>
+            <ul className="space-y-2 font-sans-body text-sm">
+              {Array.isArray(t('capabilities')) && t('capabilities').map((s) => (
+                <li key={s}>
+                  <a href="#services" className="hover:text-gold">
+                    {s}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="mb-3 font-sans-body text-[11px] uppercase tracking-[0.2em]" style={{ color: 'var(--footer-muted)' }}>{t('footer.contact')}</p>
+            <ul className="space-y-2 font-sans-body text-sm" style={{ color: 'var(--footer-muted)' }}>
+              <li>{t('footer.location')}</li>
+              <li>
+                <a href="mailto:construction.company770@gmail.com" className="hover:text-gold" style={{ color: 'var(--footer-text)' }}>
+                  construction.company770@gmail.com
+                </a>
+              </li>
+              <li>{t('footer.phonePlaceholder')}</li>
+            </ul>
+          </div>
+        </div>
+        <div className="mx-auto mt-12 flex max-w-7xl flex-col items-start justify-between gap-4 border-t px-5 pt-6 font-sans-body text-[11px] md:flex-row md:items-center md:px-8 lg:px-10" style={{ borderColor: 'var(--footer-border)', color: 'var(--footer-muted)' }}>
+          <p>© {new Date().getFullYear()} {t('footer.copyright')}</p>
+          <ThemeToggle />
+        </div>
+      </footer>
+    </div>
+  );
+}

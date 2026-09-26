@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Outfit", system-ui, sans-serif;
+  overflow-x: clip;
+}
+
+@layer base {
+  :root {
+    --background: 40 33% 94%;
+    --foreground: 30 10% 12%;
+    --card: 40 30% 96%;
+    --card-foreground: 30 10% 12%;
+    --popover: 40 30% 96%;
+    --popover-foreground: 30 10% 12%;
+    --primary: 38 35% 52%;
+    --primary-foreground: 40 33% 96%;
+    --secondary: 40 20% 88%;
+    --secondary-foreground: 30 10% 18%;
+    --muted: 40 18% 88%;
+    --muted-foreground: 30 8% 40%;
+    --accent: 38 35% 52%;
+    --accent-foreground: 40 33% 96%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 35 18% 82%;
+    --input: 35 18% 82%;
+    --ring: 38 35% 52%;
+    --radius: 0.25rem;
+    --surface: 40 28% 90%;
+    --surface-elevated: 40 33% 97%;
+    --gold: 38 45% 48%;
+    --ink: 30 12% 10%;
+    --cream: 40 33% 94%;
+    --sidebar-background: 40 33% 96%;
+    --sidebar-foreground: 30 10% 18%;
+    --sidebar-primary: 38 35% 52%;
+    --sidebar-primary-foreground: 40 33% 96%;
+    --sidebar-accent: 40 20% 88%;
+    --sidebar-accent-foreground: 30 10% 18%;
+    --sidebar-border: 35 18% 82%;
+    --sidebar-ring: 38 35% 52%;
+
+    --final-cta-bg: #E8DECA;
+    --final-cta-text: #171614;
+    --final-cta-muted: #6E6961;
+
+    --final-cta-button-bg: #0B0B0B;
+    --final-cta-button-text: #F7F4EE;
+    --final-cta-button-hover-bg: #C8AD78;
+    --final-cta-button-hover-text: #0B0B0B;
+
+    --footer-bg: #0B0B0B;
+    --footer-text: #F7F4EE;
+    --footer-muted: #BEB8AC;
+    --footer-border: #30302E;
+  }
+
+  .dark {
+    --background: 0 0% 6%;
+    --foreground: 40 20% 92%;
+    --card: 0 0% 9%;
+    --card-foreground: 40 20% 92%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 40 20% 92%;
+    --primary: 38 40% 55%;
+    --primary-foreground: 0 0% 6%;
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 40 15% 90%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 40 8% 58%;
+    --accent: 38 40% 55%;
+    --accent-foreground: 0 0% 6%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 38 40% 55%;
+    --surface: 0 0% 10%;
+    --surface-elevated: 0 0% 12%;
+    --gold: 38 42% 55%;
+    --ink: 40 20% 94%;
+    --cream: 0 0% 6%;
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 40 15% 90%;
+    --sidebar-primary: 38 40% 55%;
+    --sidebar-primary-foreground: 0 0% 6%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 40 15% 90%;
+    --sidebar-border: 0 0% 16%;
+    --sidebar-ring: 38 40% 55%;
+
+    --final-cta-bg: #1E1B17;
+    --final-cta-text: #F3EFE7;
+    --final-cta-muted: #BEB8AC;
+
+    --final-cta-button-bg: #C8AD78;
+    --final-cta-button-text: #080808;
+    --final-cta-button-hover-bg: #D7C291;
+    --final-cta-button-hover-text: #080808;
+
+    --footer-bg: #050505;
+    --footer-text: #F3EFE7;
+    --footer-muted: #8E887E;
+    --footer-border: #30302E;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Cormorant Garamond", Georgia, serif;
+  }
+  .font-sans-body {
+    font-family: "Outfit", system-ui, sans-serif;
+  }
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+  .bg-gold {
+    background-color: hsl(var(--gold));
+  }
+  .border-gold {
+    border-color: hsl(var(--gold));
+  }
+  .bg-surface {
+    background-color: hsl(var(--surface));
+  }
+  .bg-surface-elevated {
+    background-color: hsl(var(--surface-elevated));
+  }
+}
