@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import { useTheme } from 'next-themes';
 import { Menu, X, Moon, Sun, Check } from 'lucide-react';
 import Reveal from '@/components/Reveal';
-import CountUp from '@/components/CountUp';
 import Seo from '@/components/Seo';
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -163,7 +162,6 @@ export default function HomePage() {
   const nav = t('navigation');
   
   const projectImgs = [IMG.villaBw, IMG.bathBw, IMG.terraceBw];
-  const projectSpans = ['md:col-span-1', 'md:col-span-1', 'md:col-span-2 lg:col-span-1'];
 
   return (
     <div id="top" className="min-h-[100dvh] bg-background text-foreground">
