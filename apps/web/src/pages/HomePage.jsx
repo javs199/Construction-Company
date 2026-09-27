@@ -233,7 +233,7 @@ export default function HomePage() {
             <Reveal delay={0.1}>
               <div className="relative">
                 <div className="overflow-hidden rounded-sm">
-                  <img src={IMG.hero} alt={t('accessibility.imageHero')} fetchPriority="high" className="aspect-[16/10] w-full object-cover" />
+                  <img src={IMG.hero} alt={t('accessibility.imageHero')} fetchpriority="high" className="aspect-[16/10] w-full object-cover" />
                 </div>
                 <div className="mt-3 grid grid-cols-2 gap-3 sm:absolute sm:-bottom-8 sm:right-0 sm:mt-0 sm:w-[55%] sm:grid-cols-2">
                   <div className="overflow-hidden rounded-sm border border-border/60 shadow-lg">
