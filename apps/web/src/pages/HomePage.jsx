@@ -15,10 +15,8 @@ const IMG = {
   villaBw: 'https://images.hostinger.com/840c78ba-08e9-4786-a523-decd4b04715c.png',
   bathBw: 'https://images.hostinger.com/3367f020-0354-45fb-9ca9-328c74af7d31.png',
   terraceBw: 'https://images.hostinger.com/adad3f06-f110-4552-902c-6500c50e2c55.png',
-  vanity: 'https://images.hostinger.com/7d3532cd-88ed-42bc-8527-be3d7a432224.png',
   plans: 'https://images.hostinger.com/2493da16-6c92-451d-946a-013eb903bc4d.png',
   villaPool: 'https://images.hostinger.com/2bb55de1-2bb4-4f1d-971b-43ee4e4e0386.png',
-  forest: 'https://images.hostinger.com/fb02c309-1e42-43d4-804d-f7088b6f261f.png',
   meeting: 'https://images.hostinger.com/928533e3-7039-438f-80c8-798c9ec6df9f.png',
   coast: 'https://images.hostinger.com/c0f2c670-85a7-498a-abe8-e6f1e3fd36de.png',
 };
@@ -215,7 +213,7 @@ export default function HomePage() {
             <Reveal delay={0.1}>
               <div className="relative">
                 <div className="overflow-hidden rounded-sm">
-                  <img src={IMG.hero} alt={t('accessibility.imageHero')} className="aspect-[16/10] w-full object-cover" />
+                  <img src={IMG.hero} alt={t('accessibility.imageHero')} fetchPriority="high" className="aspect-[16/10] w-full object-cover" />
                 </div>
                 <div className="mt-3 grid grid-cols-2 gap-3 sm:absolute sm:-bottom-8 sm:right-0 sm:mt-0 sm:w-[55%] sm:grid-cols-2">
                   <div className="overflow-hidden rounded-sm border border-border/60 shadow-lg">
@@ -271,6 +269,8 @@ export default function HomePage() {
                     <img
                       src={projectImgs[i]}
                       alt={p.title}
+                      loading="lazy"
+                      decoding="async"
                       className="aspect-[4/3] w-full object-cover grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0"
                     />
                     <div className="absolute bottom-2 left-2 right-2 rounded bg-background/80 px-2 py-1 text-center font-sans-body text-[10px] text-foreground backdrop-blur-sm">
@@ -295,7 +295,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl items-start gap-12 px-5 md:grid-cols-2 md:gap-16 md:px-8 lg:px-10">
           <Reveal>
             <div className="relative">
-              <img src={IMG.plans} alt={t('accessibility.imagePlans')} className="aspect-[3/4] w-full rounded-sm object-cover" />
+              <img src={IMG.plans} alt={t('accessibility.imagePlans')} loading="lazy" decoding="async" className="aspect-[3/4] w-full rounded-sm object-cover" />
               <p className="mt-3 font-sans-body text-[11px] uppercase tracking-wider" style={{ color: 'var(--tp-muted)' }}>
                 {t('accessibility.tempImagePartner')}
               </p>
@@ -341,7 +341,7 @@ export default function HomePage() {
                   <Reveal>
                     <div className="grid items-center gap-10 md:grid-cols-12 md:gap-16 lg:gap-20">
                       <div className={cn("md:col-span-7", !isEven && "md:order-2")}>
-                        <img src={servicesImgs[i]} alt={s.alt} className="aspect-[4/3] w-full rounded-sm object-cover" />
+                        <img src={servicesImgs[i]} alt={s.alt} loading="lazy" decoding="async" className="aspect-[4/3] w-full rounded-sm object-cover" />
                         <p className="mt-3 font-sans-body text-[10px] uppercase tracking-wider text-muted-foreground">
                           {t('services.temporaryLabel')}
                         </p>
@@ -374,7 +374,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 md:grid-cols-12 md:gap-16 md:px-8 lg:px-10">
           <Reveal className="md:col-span-7">
             <div className="relative">
-              <img src={IMG.pool} alt={t('accessibility.altImagePool')} className="aspect-[4/3] w-full rounded-sm object-cover" />
+              <img src={IMG.pool} alt={t('accessibility.altImagePool')} loading="lazy" decoding="async" className="aspect-[4/3] w-full rounded-sm object-cover" />
               <p className="mt-3 font-sans-body text-[11px] uppercase tracking-wider text-muted-foreground">
                 {t('accessibility.tempImagePool')}
               </p>
@@ -473,13 +473,13 @@ export default function HomePage() {
           </Reveal>
           <Reveal delay={0.1} className="md:col-span-7">
             <div className="relative">
-              <img src={IMG.villaPool} alt={t('accessibility.altImageRemotePrimary')} className="aspect-[4/3] w-full rounded-sm object-cover" />
+              <img src={IMG.villaPool} alt={t('accessibility.altImageRemotePrimary')} loading="lazy" decoding="async" className="aspect-[4/3] w-full rounded-sm object-cover" />
               <p className="mt-3 font-sans-body text-[11px] uppercase tracking-wider" style={{ color: 'var(--tp-muted)' }}>
                 {t('accessibility.tempImageRemotePrimary')}
               </p>
               
               <div className="mt-8 w-full md:absolute md:-bottom-12 md:-left-12 md:mt-0 md:w-[60%] lg:-left-16 lg:-bottom-16">
-                <img src={IMG.meeting} alt={t('accessibility.altImageRemoteSecondary')} className="aspect-[4/3] w-full rounded-sm object-cover md:border-8" style={{ borderColor: 'var(--tp-bg)' }} />
+                <img src={IMG.meeting} alt={t('accessibility.altImageRemoteSecondary')} loading="lazy" decoding="async" className="aspect-[4/3] w-full rounded-sm object-cover md:border-8" style={{ borderColor: 'var(--tp-bg)' }} />
                 <p className="mt-2 font-sans-body text-[10px] uppercase tracking-wider" style={{ color: 'var(--tp-muted)' }}>
                   {t('accessibility.tempImageRemoteSecondary')}
                 </p>
@@ -493,7 +493,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl items-start gap-12 px-5 md:grid-cols-12 md:gap-16 md:px-8 lg:px-10">
           <Reveal className="md:col-span-5">
             <div className="relative">
-              <img src={IMG.plans} alt={t('accessibility.altImageFounder')} className="aspect-[3/4] w-full rounded-sm object-cover" />
+              <img src={IMG.plans} alt={t('accessibility.altImageFounder')} loading="lazy" decoding="async" className="aspect-[3/4] w-full rounded-sm object-cover" />
               <p className="mt-3 font-sans-body text-[11px] uppercase tracking-wider text-muted-foreground">
                 {t('accessibility.tempImageFounder')}
               </p>
@@ -542,7 +542,7 @@ export default function HomePage() {
       {/* Location */}
       <section className="border-b border-border bg-background">
         <div className="relative">
-          <img src={IMG.coast} alt={t('accessibility.imageCoast')} className="aspect-[21/9] max-h-[420px] w-full object-cover" />
+          <img src={IMG.coast} alt={t('accessibility.imageCoast')} loading="lazy" decoding="async" className="aspect-[21/9] max-h-[420px] w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
           <div className="absolute inset-x-0 bottom-0 px-5 pb-10 text-center md:px-8">
             <p className="font-sans-body text-[11px] uppercase tracking-[0.3em] text-foreground/90">
