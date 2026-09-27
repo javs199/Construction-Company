@@ -69,24 +69,33 @@ const translations = {
       ]
     },
     services: {
-      eyebrow: 'Capabilities',
+      eyebrow: 'Services',
       headline: 'Complete expertise for exceptional properties.',
+      temporaryLabel: 'Temporary service visual — replace with client photography',
       list: [
         {
+          number: '01',
           title: 'Luxury Construction',
-          body: 'Ground-up residences and villas built for Costa Rica’s climate, views, and lifestyle — from structure to finish.',
+          description: 'Thoughtfully coordinated residential construction for properties shaped by architecture, landscape and long-term use.',
+          alt: 'Temporary visual reference for luxury residential construction'
         },
         {
+          number: '02',
           title: 'Remodeling & Renovation',
-          body: 'Thoughtful transformations that respect existing character while elevating comfort, light, and material quality.',
+          description: 'Considered updates that improve the function, material quality and character of an existing property.',
+          alt: 'Temporary visual reference for a refined residential renovation'
         },
         {
+          number: '03',
           title: 'Custom Pools',
-          body: 'One-of-a-kind pools designed around your site, program, and the way you want to live outdoors year-round.',
+          description: 'Private pools planned as part of the residence, structure and surrounding landscape.',
+          alt: 'Temporary visual reference for a private custom pool'
         },
         {
+          number: '04',
           title: 'Property Maintenance',
-          body: 'Ongoing stewardship for finished homes — maintenance planning, upgrades, and trusted local coordination.',
+          description: 'Ongoing property care focused on continuity, coordination and attention to the details that protect the home.',
+          alt: 'Temporary visual reference for residential property care'
         }
       ]
     },
@@ -122,6 +131,19 @@ const translations = {
       headline: 'Confidence, even when you’re away.',
       body: 'Whether you are building, improving or caring for a property from abroad, communication and local oversight should remain clear, personal and easy to follow.',
       statement: 'Your property. One trusted local partner.'
+    },
+    companyStory: {
+      eyebrow: 'Company Story',
+      headline: 'Premium work, built on personal responsibility.',
+      intro: 'This section will introduce the founder’s background, connection to Uvita and personal approach to the work once the information has been confirmed.',
+      placeholders: [
+        { label: 'Founder name to be added' },
+        { label: 'Founder biography to be added' },
+        { label: 'Experience details to be confirmed' },
+        { label: 'Pool construction background to be added' },
+        { label: 'Connection to Uvita to be added' },
+        { label: 'Personal work philosophy to be added' }
+      ]
     },
     testimonial: {
       quote: 'Verified client testimonial to be added',
@@ -171,7 +193,9 @@ const translations = {
       tempImageRemotePrimary: 'Temporary coastal residence visual — replace with client photography',
       tempImageRemoteSecondary: 'Project-update image placeholder',
       altImageRemotePrimary: 'Temporary visual reference of a private tropical residence overlooking Costa Rica’s South Pacific',
-      altImageRemoteSecondary: 'Temporary project-update reference showing architectural plans and site coordination'
+      altImageRemoteSecondary: 'Temporary project-update reference showing architectural plans and site coordination',
+      tempImageFounder: 'Founder image placeholder',
+      altImageFounder: 'Temporary founder image placeholder'
     }
   },
   es: {
@@ -245,24 +269,33 @@ const translations = {
       ]
     },
     services: {
-      eyebrow: 'Capacidades',
+      eyebrow: 'Servicios',
       headline: 'Experiencia integral para propiedades excepcionales.',
+      temporaryLabel: 'Referencia visual temporal del servicio — reemplazar con fotografías del cliente',
       list: [
         {
+          number: '01',
           title: 'Construcción de lujo',
-          body: 'Residencias y villas desde cero, construidas para el clima, las vistas y el estilo de vida de Costa Rica, desde la estructura hasta los acabados.',
+          description: 'Construcción residencial coordinada con cuidado para propiedades definidas por la arquitectura, el paisaje y su uso a largo plazo.',
+          alt: 'Referencia visual temporal de construcción residencial de lujo'
         },
         {
+          number: '02',
           title: 'Remodelación y renovación',
-          body: 'Transformaciones cuidadosas que respetan el carácter existente mientras elevan el confort, la luz y la calidad de los materiales.',
+          description: 'Mejoras cuidadosamente consideradas para optimizar la función, la calidad de los materiales y el carácter de una propiedad existente.',
+          alt: 'Referencia visual temporal de una remodelación residencial refinada'
         },
         {
+          number: '03',
           title: 'Piscinas a medida',
-          body: 'Piscinas únicas diseñadas en torno a su sitio, programa y la forma en que desea vivir al aire libre durante todo el año.',
+          description: 'Piscinas privadas planificadas como parte de la residencia, su estructura y el paisaje circundante.',
+          alt: 'Referencia visual temporal de una piscina privada a medida'
         },
         {
+          number: '04',
           title: 'Mantenimiento de propiedades',
-          body: 'Gestión continua para hogares terminados: planificación de mantenimiento, mejoras y coordinación local de confianza.',
+          description: 'Cuidado continuo de la propiedad enfocado en la continuidad, la coordinación y la atención a los detalles que protegen el hogar.',
+          alt: 'Referencia visual temporal de cuidado de una propiedad residencial'
         }
       ]
     },
@@ -298,6 +331,19 @@ const translations = {
       headline: 'Confianza, incluso cuando está lejos.',
       body: 'Ya sea que esté construyendo, mejorando o cuidando una propiedad desde el extranjero, la comunicación y la supervisión local deben mantenerse claras, personales y fáciles de seguir.',
       statement: 'Su propiedad. Un solo socio local de confianza.'
+    },
+    companyStory: {
+      eyebrow: 'Historia de la empresa',
+      headline: 'Trabajo premium, basado en la responsabilidad personal.',
+      intro: 'Esta sección presentará la trayectoria del fundador, su vínculo con Uvita y su enfoque personal del trabajo una vez que la información haya sido confirmada.',
+      placeholders: [
+        { label: 'Nombre del fundador pendiente' },
+        { label: 'Biografía del fundador pendiente' },
+        { label: 'Experiencia por confirmar' },
+        { label: 'Experiencia en construcción de piscinas pendiente' },
+        { label: 'Vínculo con Uvita pendiente' },
+        { label: 'Filosofía de trabajo personal pendiente' }
+      ]
     },
     testimonial: {
       quote: 'Testimonio verificado de cliente pendiente',
@@ -347,7 +393,9 @@ const translations = {
       tempImageRemotePrimary: 'Referencia visual temporal de residencia costera — reemplazar con fotografías del cliente',
       tempImageRemoteSecondary: 'Imagen temporal de actualización del proyecto',
       altImageRemotePrimary: 'Referencia visual temporal de una residencia tropical privada con vista al Pacífico Sur de Costa Rica',
-      altImageRemoteSecondary: 'Referencia temporal de seguimiento de proyecto con planos arquitectónicos y coordinación de obra'
+      altImageRemoteSecondary: 'Referencia temporal de seguimiento de proyecto con planos arquitectónicos y coordinación de obra',
+      tempImageFounder: 'Imagen temporal del fundador',
+      altImageFounder: 'Imagen temporal pendiente del fundador'
     }
   }
 };

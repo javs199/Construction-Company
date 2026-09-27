@@ -292,7 +292,7 @@ export default function HomePage() {
       </section>
 
       {/* Trusted Partner split */}
-      <section id="about" className="border-b py-20 md:py-28" style={{ backgroundColor: 'var(--tp-bg)', borderColor: 'var(--tp-border)', color: 'var(--tp-text)' }}>
+      <section id="trusted-partner" className="border-b py-20 md:py-28" style={{ backgroundColor: 'var(--tp-bg)', borderColor: 'var(--tp-border)', color: 'var(--tp-text)' }}>
         <div className="mx-auto grid max-w-7xl items-start gap-12 px-5 md:grid-cols-2 md:gap-16 md:px-8 lg:px-10">
           <Reveal>
             <div className="relative">
@@ -325,33 +325,47 @@ export default function HomePage() {
       </section>
 
       {/* Services detail */}
-      <section id="services" className="border-b border-border bg-background py-20 md:py-28">
+      <section id="services" className="border-b border-border bg-surface py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8 lg:px-10">
           <Reveal>
             <p className="mb-3 font-sans-body text-[11px] uppercase tracking-[0.28em] text-muted-foreground">{t('services.eyebrow')}</p>
-            <h2 className="mb-12 max-w-xl font-display text-3xl font-medium md:mb-16 md:text-4xl">
+            <h2 className="mb-16 max-w-2xl font-display text-3xl font-medium leading-tight md:mb-24 md:text-4xl">
               {t('services.headline')}
             </h2>
           </Reveal>
-          <div className="grid gap-0 border-t border-border md:grid-cols-2">
-            {Array.isArray(servicesList) && servicesList.map((s, i) => (
-              <Reveal key={s.title} delay={i * 0.05}>
-                <div
-                  className={cn(
-                    'flex min-h-[200px] flex-col justify-between gap-6 border-b border-border p-6 md:p-8',
-                    i % 2 === 0 && 'md:border-r',
+          <div className="flex flex-col gap-20 md:gap-32">
+            {Array.isArray(servicesList) && servicesList.map((s, i) => {
+              const isEven = i % 2 === 0;
+              const servicesImgs = [IMG.villaBw, IMG.bathBw, IMG.villaPool, IMG.architect];
+              return (
+                <article key={s.title} className="group">
+                  <Reveal>
+                    <div className="grid items-center gap-10 md:grid-cols-12 md:gap-16 lg:gap-20">
+                      <div className={cn("md:col-span-7", !isEven && "md:order-2")}>
+                        <img src={servicesImgs[i]} alt={s.alt} className="aspect-[4/3] w-full rounded-sm object-cover" />
+                        <p className="mt-3 font-sans-body text-[10px] uppercase tracking-wider text-muted-foreground">
+                          {t('services.temporaryLabel')}
+                        </p>
+                      </div>
+                      <div className={cn("md:col-span-5 md:px-2 lg:px-4", !isEven && "md:order-1")}>
+                        <div className="flex flex-col gap-5 border-l pl-6" style={{ borderColor: '#C8AD78' }}>
+                          <span className="font-display text-2xl font-medium" style={{ color: '#C8AD78' }}>{s.number}</span>
+                          <div>
+                            <h3 className="font-display text-2xl font-medium text-foreground">{s.title}</h3>
+                            <p className="mt-4 font-sans-body text-sm leading-relaxed text-muted-foreground">
+                              {s.description}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Reveal>
+                  {i < servicesList.length - 1 && (
+                    <div className="mt-20 border-b border-border md:mt-32" />
                   )}
-                >
-                  <div className="flex h-24 w-full items-end justify-end bg-surface">
-                    <span className="p-4 font-display text-4xl text-muted-foreground/40">0{i + 1}</span>
-                  </div>
-                  <div>
-                    <h3 className="font-display text-2xl font-medium">{s.title}</h3>
-                    <p className="mt-3 max-w-md font-sans-body text-sm leading-relaxed text-muted-foreground">{s.body}</p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -471,6 +485,39 @@ export default function HomePage() {
                   {t('accessibility.tempImageRemoteSecondary')}
                 </p>
               </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+      {/* Company Story */}
+      <section id="about" className="border-b border-border bg-surface py-20 md:py-28">
+        <div className="mx-auto grid max-w-7xl items-start gap-12 px-5 md:grid-cols-12 md:gap-16 md:px-8 lg:px-10">
+          <Reveal className="md:col-span-5">
+            <div className="relative">
+              <img src={IMG.plans} alt={t('accessibility.altImageFounder')} className="aspect-[3/4] w-full rounded-sm object-cover" />
+              <p className="mt-3 font-sans-body text-[11px] uppercase tracking-wider text-muted-foreground">
+                {t('accessibility.tempImageFounder')}
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={0.1} className="md:col-span-7">
+            <div className="max-w-2xl">
+              <p className="mb-4 font-sans-body text-[11px] uppercase tracking-[0.28em] text-muted-foreground">{t('companyStory.eyebrow')}</p>
+              <h2 className="mb-6 font-display text-3xl font-medium leading-tight md:text-4xl">
+                {t('companyStory.headline')}
+              </h2>
+              <p className="mb-10 font-sans-body text-sm leading-relaxed text-muted-foreground">
+                {t('companyStory.intro')}
+              </p>
+              
+              <ul className="flex flex-col border-t border-border">
+                {Array.isArray(t('companyStory.placeholders')) && t('companyStory.placeholders').map((item, i) => (
+                  <li key={i} className="border-b border-border py-5 flex items-center gap-5">
+                    <span className="block h-1.5 w-1.5 rotate-45" style={{ backgroundColor: '#C8AD78' }} />
+                    <span className="font-sans-body text-sm font-medium text-foreground">{item.label}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </Reveal>
         </div>
