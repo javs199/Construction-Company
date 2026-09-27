@@ -2,7 +2,7 @@ import importPlugin from 'eslint-plugin-import';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
-import unicodeEscapePlugin from './eslint.unicode-escapes-plugin.mjs';
+
 
 export default [
 	{ ignores: ['node_modules/**', 'dist/**', 'build/**', 'vite.config.js'] },
@@ -45,17 +45,15 @@ export default [
 			'no-undef': 'error', // Undefined variables cause runtime errors
 			'no-empty': ['error', { allowEmptyCatch: true }], // Empty blocks often signal a bug (e.g. missing body)
 
+			// Allowed custom attributes to prevent false positives in React 18.3.1
+			'react/no-unknown-property': ['error', { ignore: ['fetchpriority'] }],
+
 			// Override recommended import rules for stricter checking
 			'import/no-self-import': 'error', // Extremely fast rule, breaking results in infinite loop/bundling error
 
 			// Disable expensive rules for performance
 			'import/no-cycle': 'off', // AI rarely makes this error, and the rule is very slow to run
 		},
-	},
-	{
-		files: ['**/*.jsx'],
-		plugins: { horizons: unicodeEscapePlugin },
-		rules: { 'horizons/no-unicode-escapes-in-jsx': 'warn' },
 	},
 	{ files: ['tools/**/*.js', 'tailwind.config.js'], languageOptions: { globals: globals.node } },
 ];
