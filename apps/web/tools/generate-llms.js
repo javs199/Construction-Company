@@ -2,6 +2,8 @@
 
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'node:url';
+import translations from '../src/i18n/translations.js';
 
 const CLEAN_CONTENT_REGEX = {
 	comments: /\/\*[\s\S]*?\*\/|\/\/.*$/gm,
@@ -116,10 +118,14 @@ function extractHelmetData(content, filePath, routes) {
 		? routes.get(fileName)
 		: generateFallbackUrl(fileName);
 
+	const isHomePage = fileName === 'HomePage';
+	const finalTitle = title || (isHomePage ? translations.en.seo.title : 'Untitled Page');
+	const finalDescription = description || (isHomePage ? translations.en.seo.description : 'No description available');
+
 	return {
 		url,
-		title: title || 'Untitled Page',
-		description: description || 'No description available'
+		title: finalTitle,
+		description: finalDescription
 	};
 }
 
@@ -184,7 +190,7 @@ function main() {
 	fs.writeFileSync(outputPath, llmsTxtContent, 'utf8');
 }
 
-const isMainModule = import.meta.url === `file://${process.argv[1]}`;
+const isMainModule = process.argv[1] && path.resolve(fileURLToPath(import.meta.url)) === path.resolve(process.argv[1]);
 
 if (isMainModule) {
 	main();

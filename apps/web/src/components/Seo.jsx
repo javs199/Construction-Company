@@ -5,7 +5,10 @@ import { Helmet } from 'react-helmet';
 // <title> and <meta name="description">, because the llms.txt build step reads
 // those two tags straight out of the page file's source.
 const Seo = ({ title, description, image, url, siteName, type = 'website' }) => {
-    const canonical = url || window.location.origin + window.location.pathname;
+    const origin = typeof window !== 'undefined' ? window.location.origin : '';
+    const path = typeof window !== 'undefined' ? window.location.pathname : '';
+    const cleanPath = path.length > 1 && path.endsWith('/') ? path.slice(0, -1) : path;
+    const canonical = url || (origin + cleanPath);
 
     return (
         <Helmet>
