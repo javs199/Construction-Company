@@ -30,7 +30,7 @@ function LanguageToggle({ className }) {
         onClick={() => setLanguage('en')}
         aria-pressed={language === 'en'}
         lang="en"
-        className={language === 'en' ? 'text-foreground' : 'text-muted-foreground hover:text-foreground transition'}
+        className={cn(language === 'en' ? 'text-foreground' : 'text-muted-foreground hover:text-foreground transition', 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:rounded-sm')}
         aria-label={t('accessibility.changeToEnglish')}
       >
         {t('accessibility.langEn')}
@@ -41,7 +41,7 @@ function LanguageToggle({ className }) {
         onClick={() => setLanguage('es')}
         aria-pressed={language === 'es'}
         lang="es"
-        className={language === 'es' ? 'text-foreground' : 'text-muted-foreground hover:text-foreground transition'}
+        className={cn(language === 'es' ? 'text-foreground' : 'text-muted-foreground hover:text-foreground transition', 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:rounded-sm')}
         aria-label={t('accessibility.changeToSpanish')}
       >
         {t('accessibility.langEs')}
@@ -73,10 +73,24 @@ function Header() {
   const [open, setOpen] = useState(false);
   const { t } = useLanguage();
   const nav = t('navigation');
+  const menuBtnRef = React.useRef(null);
+
+  React.useEffect(() => {
+    if (!open) return;
+    const handleEsc = (e) => {
+      if (e.key === 'Escape') {
+        setOpen(false);
+        menuBtnRef.current?.focus();
+      }
+    };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, [open]);
+
   return (
     <header className="absolute inset-x-0 top-0 z-50">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5 md:px-8 lg:px-10">
-        <a href="#top" className="font-sans-body text-[11px] font-semibold uppercase tracking-[0.28em] text-foreground">
+        <a href="#top" className="font-sans-body text-[11px] font-semibold uppercase tracking-[0.28em] text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-background rounded-sm">
           {t('header.company')}
           <span className="block tracking-[0.32em] text-muted-foreground">{t('header.descriptor')}</span>
         </a>
@@ -85,7 +99,7 @@ function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="font-sans-body text-[12px] font-medium tracking-wide text-muted-foreground transition hover:text-foreground"
+              className="font-sans-body text-[12px] font-medium tracking-wide text-muted-foreground transition hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:rounded-sm focus-visible:ring-offset-4 focus-visible:ring-offset-background"
             >
               {item.label}
             </a>
@@ -96,22 +110,25 @@ function Header() {
           <ThemeToggle />
           <a
             href="#contact"
-            className="hidden rounded-sm bg-primary px-5 py-2.5 font-sans-body text-[12px] font-medium tracking-wide text-primary-foreground transition hover:opacity-90 sm:inline-flex"
+            className="hidden rounded-sm bg-primary px-5 py-2.5 font-sans-body text-[12px] font-medium tracking-wide text-primary-foreground transition hover:opacity-90 sm:inline-flex focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             {t('hero.ctaDiscuss')}
           </a>
           <button
+            ref={menuBtnRef}
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border lg:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             aria-label={open ? t('accessibility.closeMenu') : t('accessibility.openMenu')}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
             onClick={() => setOpen((v) => !v)}
           >
-            {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+            {open ? <X className="h-4 w-4" aria-hidden="true" focusable="false" /> : <Menu className="h-4 w-4" aria-hidden="true" focusable="false" />}
           </button>
         </div>
       </div>
       {open && (
-        <div className="border-t border-border bg-background/95 px-5 py-6 backdrop-blur-md lg:hidden">
+        <div id="mobile-menu" className="border-t border-border bg-background/95 px-5 py-6 backdrop-blur-md lg:hidden">
           <div className="flex flex-col gap-4">
             <LanguageToggle className="mb-2" />
             {Array.isArray(nav) && nav.map((item) => (
@@ -119,7 +136,7 @@ function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="font-sans-body text-sm text-foreground"
+                className="font-sans-body text-sm text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:rounded-sm"
               >
                 {item.label}
               </a>
@@ -127,7 +144,7 @@ function Header() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex justify-center rounded-sm bg-primary px-5 py-3 text-sm text-primary-foreground"
+              className="mt-2 inline-flex justify-center rounded-sm bg-primary px-5 py-3 text-sm text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               {t('hero.ctaDiscuss')}
             </a>
@@ -160,8 +177,13 @@ export default function HomePage() {
         siteName={t('header.company')}
       />
 
+      <a href="#main-content" className="sr-only focus-visible:not-sr-only focus-visible:absolute focus-visible:z-[100] focus-visible:top-4 focus-visible:left-4 focus-visible:rounded-sm focus-visible:bg-primary focus-visible:px-4 focus-visible:py-2 focus-visible:text-primary-foreground focus-visible:outline-none">
+        {t('accessibility.skipToMain')}
+      </a>
+
       <Header />
 
+      <main id="main-content">
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-border bg-background pt-28 md:pt-32">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 pb-16 md:grid-cols-12 md:gap-8 md:px-8 md:pb-24 lg:px-10">
@@ -174,7 +196,7 @@ export default function HomePage() {
                 {Array.isArray(t('hero.headline')) && t('hero.headline').map((frag, idx) => (
                   <React.Fragment key={idx}>
                     {frag.accent ? (
-                      <span className="italic text-gold">{frag.text}</span>
+                      <span className="italic text-gold-display">{frag.text}</span>
                     ) : (
                       frag.text
                     )}
@@ -188,13 +210,13 @@ export default function HomePage() {
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-2 rounded-sm bg-primary px-6 py-3 font-sans-body text-[13px] font-medium text-primary-foreground transition hover:opacity-90 active:scale-[0.98]"
+                  className="inline-flex items-center gap-2 rounded-sm bg-primary px-6 py-3 font-sans-body text-[13px] font-medium text-primary-foreground transition hover:opacity-90 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
                   {t('hero.ctaDiscuss')}
                 </a>
                 <a
                   href="#projects"
-                  className="inline-flex items-center gap-2 rounded-sm border border-border bg-transparent px-6 py-3 font-sans-body text-[13px] font-medium text-foreground transition hover:border-foreground/40"
+                  className="inline-flex items-center gap-2 rounded-sm border border-border bg-transparent px-6 py-3 font-sans-body text-[13px] font-medium text-foreground transition hover:border-foreground/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
                   {t('hero.ctaView')}
                 </a>
@@ -202,7 +224,7 @@ export default function HomePage() {
               <ul className="mt-10 space-y-2.5 font-sans-body text-[12px] text-muted-foreground">
                 {Array.isArray(t('hero.trustMarkers')) && t('hero.trustMarkers').map((m) => (
                   <li key={m} className="flex items-start gap-2">
-                    <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold" strokeWidth={2} />
+                    <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold" strokeWidth={2} aria-hidden="true" focusable="false" />
                     {m}
                   </li>
                 ))}
@@ -237,7 +259,7 @@ export default function HomePage() {
             <a
               key={label}
               href="#services"
-              className="px-4 py-5 text-center font-sans-body text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground transition hover:bg-background hover:text-foreground md:py-6 md:text-xs"
+              className="px-4 py-5 text-center font-sans-body text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground transition hover:bg-background hover:text-foreground md:py-6 md:text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary"
             >
               {label}
             </a>
@@ -347,8 +369,8 @@ export default function HomePage() {
                         </p>
                       </div>
                       <div className={cn("md:col-span-5 md:px-2 lg:px-4", !isEven && "md:order-1")}>
-                        <div className="flex flex-col gap-5 border-l pl-6" style={{ borderColor: '#C8AD78' }}>
-                          <span className="font-display text-2xl font-medium" style={{ color: '#C8AD78' }}>{s.number}</span>
+                        <div className="flex flex-col gap-5 border-l pl-6 border-gold">
+                          <span className="font-display text-2xl font-medium text-gold-display">{s.number}</span>
                           <div>
                             <h3 className="font-display text-2xl font-medium text-foreground">{s.title}</h3>
                             <p className="mt-4 font-sans-body text-sm leading-relaxed text-muted-foreground">
@@ -415,7 +437,7 @@ export default function HomePage() {
             <ol className="flex flex-col border-t border-border">
               {Array.isArray(t('whyCompany.items')) && t('whyCompany.items').map((item) => (
                 <li key={item.n} className="flex flex-col gap-2 border-b border-border py-6 sm:flex-row sm:items-start sm:gap-8 md:py-8">
-                  <span className="font-display text-2xl font-medium" style={{ color: '#C8AD78' }}>{item.n}</span>
+                  <span className="font-display text-2xl font-medium text-gold-display">{item.n}</span>
                   <div className="flex-1">
                     <h3 className="font-sans-body text-base font-semibold text-foreground">{item.title}</h3>
                     <p className="mt-2 font-sans-body text-sm leading-relaxed text-muted-foreground">
@@ -442,7 +464,7 @@ export default function HomePage() {
             {Array.isArray(approachPhases) && approachPhases.map((ph, i) => (
               <Reveal key={ph.n} delay={i * 0.06}>
                 <div className="border-t border-gold/40 pt-5">
-                  <p className="font-sans-body text-[11px] tracking-[0.2em] text-gold">{ph.n}</p>
+                  <p className="font-sans-body text-[11px] tracking-[0.2em] text-gold-text">{ph.n}</p>
                   <h3 className="mt-3 font-display text-xl font-medium">{ph.title}</h3>
                   <p className="mt-2 font-sans-body text-sm leading-relaxed text-muted-foreground">{ph.body}</p>
                 </div>
@@ -512,7 +534,7 @@ export default function HomePage() {
               <ul className="flex flex-col border-t border-border">
                 {Array.isArray(t('companyStory.placeholders')) && t('companyStory.placeholders').map((item, i) => (
                   <li key={i} className="border-b border-border py-5 flex items-center gap-5">
-                    <span className="block h-1.5 w-1.5 rotate-45" style={{ backgroundColor: '#C8AD78' }} />
+                    <span className="block h-1.5 w-1.5 rotate-45 bg-gold" />
                     <span className="font-sans-body text-sm font-medium text-foreground">{item.label}</span>
                   </li>
                 ))}
@@ -581,6 +603,7 @@ export default function HomePage() {
           </Reveal>
         </div>
       </section>
+      </main>
 
       {/* Footer */}
       <footer className="border-t py-14" style={{ backgroundColor: 'var(--footer-bg)', borderColor: 'var(--footer-border)', color: 'var(--footer-text)' }}>
@@ -597,7 +620,7 @@ export default function HomePage() {
             <ul className="space-y-2 font-sans-body text-sm">
               {Array.isArray(nav) && nav.slice(0, 4).map((n) => (
                 <li key={n.href}>
-                  <a href={n.href} className="hover:text-gold">
+                  <a href={n.href} className="hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B0B0B] rounded-sm">
                     {n.label}
                   </a>
                 </li>

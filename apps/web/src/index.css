@@ -34,6 +34,8 @@ body {
     --surface: 38.571 30.435% 90.98%;
     --surface-elevated: 40 100% 98.824%;
     --gold: 39.75 42.105% 62.745%;
+    --gold-text: 39.75 43% 33%;
+    --gold-display: 39.75 42% 42%;
     --ink: 40 6.977% 8.431%;
     --cream: 40 36% 95.098%;
     --placeholder: 42 13.158% 85.098%;
@@ -48,7 +50,7 @@ body {
 
     --final-cta-bg: #E8DECA;
     --final-cta-text: #171614;
-    --final-cta-muted: #6E6961;
+    --final-cta-muted: #5C5750;
 
     --final-cta-button-bg: #0B0B0B;
     --final-cta-button-text: #F7F4EE;
@@ -62,7 +64,7 @@ body {
 
     --tp-bg: #E8DECA;
     --tp-text: #171614;
-    --tp-muted: #6E6961;
+    --tp-muted: #5C5750;
     --tp-border: #D6CEC0;
     --tp-accent: #C8AD78;
   }
@@ -90,6 +92,8 @@ body {
     --surface: 0 0% 7.843%;
     --surface-elevated: 60 3.226% 12.157%;
     --gold: 39.75 42.105% 62.745%;
+    --gold-text: 39.75 42.105% 62.745%;
+    --gold-display: 39.75 42.105% 62.745%;
     --ink: 40 33.333% 92.941%;
     --cream: 0 0% 3.137%;
     --placeholder: 45 5.882% 13.333%;
@@ -149,6 +153,12 @@ body {
   }
   .text-gold {
     color: hsl(var(--gold));
+  }
+  .text-gold-text {
+    color: hsl(var(--gold-text));
+  }
+  .text-gold-display {
+    color: hsl(var(--gold-display));
   }
   .bg-gold {
     background-color: hsl(var(--gold));
