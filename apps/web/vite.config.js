@@ -23,6 +23,7 @@ logger.error = (msg, options) => {
 }
 
 export default defineConfig({
+	base: '/Construction-Company/',
 	optimizeDeps: {
 		include: allDeps,
 	},

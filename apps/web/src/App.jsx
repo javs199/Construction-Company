@@ -7,7 +7,7 @@ import HomePage from './pages/HomePage';
 function App() {
   return (
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} storageKey="cc-theme">
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
