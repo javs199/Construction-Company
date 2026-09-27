@@ -15,6 +15,10 @@ const translations = {
       { label: 'About', href: '#about' },
       { label: 'Contact', href: '#contact' },
     ],
+    contact: {
+      emailAddress: 'construction.company770@gmail.com',
+      emailHref: 'mailto:construction.company770@gmail.com?subject=Project%20Inquiry%20%E2%80%94%20Construction%20Company'
+    },
     hero: {
       eyebrow: 'Costa Rica · Design · Build · Steward',
       headline: [
@@ -156,8 +160,7 @@ const translations = {
     finalCta: {
       headline: 'Let’s talk about your property.',
       body: 'Tell us what you’re planning, building or looking to improve.',
-      cta: 'Discuss Your Project',
-      meta: 'construction.company770@gmail.com · Phone / WhatsApp to be added · Uvita, Costa Rica'
+      cta: 'Discuss Your Project'
     },
     footer: {
       desc: 'Luxury Construction & Property Care',
@@ -214,6 +217,10 @@ const translations = {
       { label: 'Nosotros', href: '#about' },
       { label: 'Contacto', href: '#contact' },
     ],
+    contact: {
+      emailAddress: 'construction.company770@gmail.com',
+      emailHref: 'mailto:construction.company770@gmail.com?subject=Consulta%20de%20proyecto%20%E2%80%94%20Construction%20Company'
+    },
     hero: {
       eyebrow: 'Costa Rica · Diseño · Construcción · Cuidado',
       headline: [
@@ -356,8 +363,7 @@ const translations = {
     finalCta: {
       headline: 'Hablemos de su propiedad.',
       body: 'Cuéntenos qué está planificando, construyendo o buscando mejorar.',
-      cta: 'Hablemos de su proyecto',
-      meta: 'construction.company770@gmail.com · Teléfono / WhatsApp pendiente · Uvita, Costa Rica'
+      cta: 'Hablemos de su proyecto'
     },
     footer: {
       desc: 'Construcción de lujo y cuidado de propiedades',

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { useTheme } from 'next-themes';
-import { Menu, X, Moon, Sun, ArrowUpRight, Check } from 'lucide-react';
+import { Menu, X, Moon, Sun, Check } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import CountUp from '@/components/CountUp';
 import Seo from '@/components/Seo';
@@ -266,8 +266,8 @@ export default function HomePage() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {Array.isArray(projectsList) && projectsList.map((p, i) => (
               <Reveal key={p.title} delay={i * 0.08}>
-                <article className="group">
-                  <div className="overflow-hidden rounded-sm bg-muted relative">
+                <article>
+                  <div className="group relative overflow-hidden rounded-sm bg-muted">
                     <img
                       src={projectImgs[i]}
                       alt={p.title}
@@ -282,7 +282,6 @@ export default function HomePage() {
                       <h3 className="font-display text-xl font-medium">{p.title}</h3>
                       <p className="mt-1 font-sans-body text-xs text-muted-foreground">{p.meta}</p>
                     </div>
-                    <ArrowUpRight className="mt-1 h-4 w-4 shrink-0 text-muted-foreground transition group-hover:text-gold" strokeWidth={1.5} />
                   </div>
                 </article>
               </Reveal>
@@ -567,14 +566,18 @@ export default function HomePage() {
               {t('finalCta.body')}
             </p>
             <a
-              href="mailto:construction.company770@gmail.com"
-              className="mt-10 inline-flex rounded-sm px-8 py-3.5 font-sans-body text-[13px] font-medium transition active:scale-[0.98] bg-[var(--final-cta-button-bg)] text-[var(--final-cta-button-text)] hover:bg-[var(--final-cta-button-hover-bg)] hover:text-[var(--final-cta-button-hover-text)]"
+              href={t('contact.emailHref')}
+              className="mt-10 inline-flex rounded-sm px-8 py-3.5 font-sans-body text-[13px] font-medium transition active:scale-[0.98] bg-[var(--final-cta-button-bg)] text-[var(--final-cta-button-text)] hover:bg-[var(--final-cta-button-hover-bg)] hover:text-[var(--final-cta-button-hover-text)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
             >
               {t('finalCta.cta')}
             </a>
-            <p className="mt-8 font-sans-body text-xs" style={{ color: 'var(--final-cta-muted)' }}>
-              {t('finalCta.meta')}
-            </p>
+            <div className="mt-8 flex flex-col items-center gap-2 font-sans-body text-xs sm:flex-row sm:justify-center sm:gap-4" style={{ color: 'var(--final-cta-muted)' }}>
+              <a href={t('contact.emailHref')} className="rounded-sm transition hover:text-[var(--final-cta-text)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold px-1">{t('contact.emailAddress')}</a>
+              <span className="hidden sm:inline">·</span>
+              <span>{t('footer.phonePlaceholder')}</span>
+              <span className="hidden sm:inline">·</span>
+              <span>{t('footer.location')}</span>
+            </div>
           </Reveal>
         </div>
       </section>
@@ -606,8 +609,8 @@ export default function HomePage() {
             <ul className="space-y-2 font-sans-body text-sm" style={{ color: 'var(--footer-muted)' }}>
               <li>{t('footer.location')}</li>
               <li>
-                <a href="mailto:construction.company770@gmail.com" className="hover:text-gold" style={{ color: 'var(--footer-text)' }}>
-                  construction.company770@gmail.com
+                <a href={t('contact.emailHref')} className="rounded-sm transition hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold px-1" style={{ color: 'var(--footer-text)' }}>
+                  {t('contact.emailAddress')}
                 </a>
               </li>
               <li>{t('footer.phonePlaceholder')}</li>
