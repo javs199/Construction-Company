@@ -172,7 +172,7 @@ export default function HomePage() {
       <Seo
         title={t('seo.title')}
         description={t('seo.description')}
-        siteName={t('header.company')}
+        siteName={t('footer.copyright')}
       />
 
       <a href="#main-content" className="sr-only focus-visible:not-sr-only focus-visible:absolute focus-visible:z-[100] focus-visible:top-4 focus-visible:left-4 focus-visible:rounded-sm focus-visible:bg-primary focus-visible:px-4 focus-visible:py-2 focus-visible:text-primary-foreground focus-visible:outline-none">
@@ -371,7 +371,7 @@ export default function HomePage() {
                           <span className="font-display text-2xl font-medium text-gold-display">{s.number}</span>
                           <div>
                             <h3 className="font-display text-2xl font-medium text-foreground">{s.title}</h3>
-                            <p className="mt-4 font-sans-body text-sm leading-relaxed text-muted-foreground">
+                            <p className="mt-4 whitespace-pre-line font-sans-body text-sm leading-relaxed text-muted-foreground">
                               {s.description}
                             </p>
                           </div>
@@ -407,7 +407,7 @@ export default function HomePage() {
                 {t('poolExpertise.headline')}
               </h2>
               <div className="mt-8 border-l border-gold pl-6">
-                <p className="font-sans-body text-sm leading-relaxed text-foreground">
+                <p className="whitespace-pre-line font-sans-body text-sm leading-relaxed text-foreground">
                   {t('poolExpertise.body')}
                 </p>
                 <p className="mt-4 font-sans-body text-sm leading-relaxed text-muted-foreground">
@@ -458,13 +458,13 @@ export default function HomePage() {
               {t('approach.headline')}
             </h2>
           </Reveal>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {Array.isArray(approachPhases) && approachPhases.map((ph, i) => (
               <Reveal key={ph.n} delay={i * 0.06}>
                 <div className="border-t border-gold/40 pt-5">
                   <p className="font-sans-body text-[11px] tracking-[0.2em] text-gold-text">{ph.n}</p>
                   <h3 className="mt-3 font-display text-xl font-medium">{ph.title}</h3>
-                  <p className="mt-2 font-sans-body text-sm leading-relaxed text-muted-foreground">{ph.body}</p>
+                  <p className="mt-2 whitespace-pre-line font-sans-body text-sm leading-relaxed text-muted-foreground">{ph.body}</p>
                 </div>
               </Reveal>
             ))}
@@ -481,7 +481,7 @@ export default function HomePage() {
               <h2 className="mb-6 font-display text-3xl font-medium leading-tight md:text-4xl">
                 {t('remoteOwners.headline')}
               </h2>
-              <p className="font-sans-body text-sm leading-relaxed" style={{ color: 'var(--tp-muted)' }}>
+              <p className="whitespace-pre-line font-sans-body text-sm leading-relaxed" style={{ color: 'var(--tp-muted)' }}>
                 {t('remoteOwners.body')}
               </p>
               <div className="mt-8 border-l pl-6" style={{ borderColor: 'var(--tp-accent)' }}>
@@ -525,18 +525,11 @@ export default function HomePage() {
               <h2 className="mb-6 font-display text-3xl font-medium leading-tight md:text-4xl">
                 {t('companyStory.headline')}
               </h2>
-              <p className="mb-10 font-sans-body text-sm leading-relaxed text-muted-foreground">
+              <p className="mb-10 whitespace-pre-line font-sans-body text-sm leading-relaxed text-muted-foreground">
                 {t('companyStory.intro')}
               </p>
               
-              <ul className="flex flex-col border-t border-border">
-                {Array.isArray(t('companyStory.placeholders')) && t('companyStory.placeholders').map((item, i) => (
-                  <li key={i} className="border-b border-border py-5 flex items-center gap-5">
-                    <span className="block h-1.5 w-1.5 rotate-45 bg-gold" />
-                    <span className="font-sans-body text-sm font-medium text-foreground">{item.label}</span>
-                  </li>
-                ))}
-              </ul>
+
             </div>
           </Reveal>
         </div>
@@ -561,14 +554,14 @@ export default function HomePage() {
 
       {/* Location */}
       <section className="border-b border-border bg-background">
-        <div className="relative">
-          <img src={IMG.coast} alt={t('accessibility.imageCoast')} loading="lazy" decoding="async" className="aspect-[21/9] max-h-[420px] w-full object-cover" />
+        <div className="relative grid">
+          <img src={IMG.coast} alt={t('accessibility.imageCoast')} loading="lazy" decoding="async" className="col-start-1 row-start-1 aspect-[21/9] h-full max-h-[420px] min-h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 px-5 pb-10 text-center md:px-8">
+          <div className="relative col-start-1 row-start-1 self-end px-5 pb-10 pt-10 text-center md:px-8">
             <p className="font-sans-body text-[11px] uppercase tracking-[0.3em] text-foreground/90">
               {t('location.headline')}
             </p>
-            <p className="mt-2 font-sans-body text-[11px] text-foreground/70">
+            <p className="mx-auto mt-2 max-w-3xl whitespace-pre-line font-sans-body text-[11px] text-foreground/70">
               {t('location.body')}
             </p>
           </div>
@@ -607,7 +600,7 @@ export default function HomePage() {
       <footer className="border-t py-14" style={{ backgroundColor: 'var(--footer-bg)', borderColor: 'var(--footer-border)', color: 'var(--footer-text)' }}>
         <div className="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-3 md:px-8 lg:px-10">
           <div className="md:col-span-1">
-            <p className="font-sans-body text-[11px] font-semibold uppercase tracking-[0.28em]">{t('header.company')}</p>
+            <p className="font-sans-body text-[11px] font-semibold uppercase tracking-[0.28em]">{t('footer.copyright')}</p>
             <p className="mt-4 max-w-xs font-sans-body text-xs leading-relaxed" style={{ color: 'var(--footer-muted)' }}>
               {t('footer.desc')}<br />
               {t('footer.location')}

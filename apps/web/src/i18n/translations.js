@@ -1,8 +1,8 @@
 const translations = {
   en: {
     seo: {
-      title: 'Construction Company | Luxury Construction & Property Care in Uvita',
-      description: 'Luxury construction, remodeling, custom pools and property care in Uvita and Costa Rica’s South Pacific.'
+      title: "Construction Company | Luxury Construction & Property Care in Costa Rica",
+      description: "Luxury construction, remodeling, custom pools and jacuzzis, and property care and maintenance throughout Costa Rica."
     },
     header: {
       company: 'Construction',
@@ -27,21 +27,21 @@ const translations = {
         { text: 'Exceptional', accent: true, br: true },
         { text: 'Properties.', br: false }
       ],
-      supporting: 'End-to-end construction and property care for owners who expect clarity, craftsmanship, and lasting value in Costa Rica.',
+      supporting: "Construction, remodeling, custom pools, and property care throughout Costa Rica — backed by 12 years of hands-on experience, personal project oversight, and clear communication from start to finish.",
       ctaDiscuss: 'Discuss Your Project',
       ctaView: 'View Selected Work',
       trustMarkers: [
-        'Directly managed. Locally grounded.',
-        'Transparent budgets and timelines',
-        'Dedicated project lead from day one'
+        "Jason’s 12 years of hands-on experience",
+        "Personal project oversight",
+        "Clear communication from start to finish"
       ]
     },
     capabilities: [
-      'Luxury Construction',
-      'Remodeling',
-      'Custom Pools',
-      'Property Care'
-    ],
+        "Luxury Construction",
+        "Remodeling & Renovation",
+        "Custom Pools & Jacuzzis",
+        "Property Care & Maintenance"
+      ],
     projects: {
       eyebrow: 'Selected Work',
       headline: 'Spaces shaped by vision, place and purpose.',
@@ -64,12 +64,24 @@ const translations = {
     trustedPartner: {
       eyebrow: 'A Trusted Local Partner',
       headline: 'One trusted local partner, from construction to long-term care.',
-      body: 'From the first conversation through construction and ongoing care, every stage is guided through direct communication, personal oversight and coordinated expertise.',
+      body: "Jason Cascante personally oversees projects, with a focus on trust, quality, creative solutions, and clear communication.",
       principles: [
-        { title: 'Direct Communication', body: 'Clear conversations and practical updates throughout the work.' },
-        { title: 'Personal Oversight', body: 'Close attention to decisions, details and day-to-day coordination.' },
-        { title: 'Integrated Expertise', body: 'Construction, remodeling, pools and property care considered together.' },
-        { title: 'Long-Term Property Care', body: 'Support designed to continue beyond project completion.' }
+        {
+          "title": "12 Years of Hands-On Experience",
+          "body": "Jason's experience was built on site, progressing from hands-on construction work to personally overseeing projects today."
+        },
+        {
+          "title": "Personal Project Oversight",
+          "body": "Jason remains directly involved in the projects Construction Company takes on, providing clients with a clear point of responsibility throughout the work."
+        },
+        {
+          "title": "Quality & Creative Solutions",
+          "body": "Every property presents different challenges. The approach combines quality workmanship with practical and creative solutions tailored to each project."
+        },
+        {
+          "title": "Clear Communication & Trust",
+          "body": "Clear communication is treated as part of the work itself, helping clients understand the process, decisions, and progress of their project."
+        }
       ]
     },
     services: {
@@ -78,68 +90,110 @@ const translations = {
       temporaryLabel: 'Temporary service visual — replace with client photography',
       list: [
         {
-          number: '01',
-          title: 'Luxury Construction',
-          description: 'Thoughtfully coordinated residential construction for properties shaped by architecture, landscape and long-term use.',
-          alt: 'Temporary visual reference for luxury residential construction'
+          "number": "01",
+          "title": "Luxury Construction",
+          "description": "Built with purpose. Managed with care.\n\nFrom initial planning through construction and final finishes, Construction Company delivers residential projects with a focus on quality, communication, and attention to detail.\n\nEach project is approached individually, coordinating the work required to bring the vision to life while maintaining clear communication throughout the process.\n\nWith Jason personally involved in project oversight, clients have a direct connection to the person responsible for delivering the work.",
+          "alt": "Temporary visual reference for luxury residential construction"
         },
         {
-          number: '02',
-          title: 'Remodeling & Renovation',
-          description: 'Considered updates that improve the function, material quality and character of an existing property.',
-          alt: 'Temporary visual reference for a refined residential renovation'
+          "number": "02",
+          "title": "Remodeling & Renovation",
+          "description": "Transform what already exists.\n\nConstruction Company approaches renovations with the same level of attention as new construction, adapting existing spaces to better serve the way clients want to live, use, or invest in their property.\n\nFrom focused improvements to more extensive transformations, each project begins with an evaluation of the existing property and a clear understanding of the desired result.\n\nThe goal is not simply to make something look different, but to deliver thoughtful solutions, quality finishes, and improvements that feel considered as part of the property as a whole.",
+          "alt": "Temporary visual reference for a refined residential renovation"
         },
         {
-          number: '03',
-          title: 'Custom Pools',
-          description: 'Private pools planned as part of the residence, structure and surrounding landscape.',
-          alt: 'Temporary visual reference for a private custom pool'
+          "number": "03",
+          "title": "Custom Pools & Jacuzzis",
+          "description": "Designed for the property. Built for the experience.\n\nPools and jacuzzis are a core area of Construction Company's hands-on experience.\n\nEach project is approached as part of the property itself, considering how the new space will connect with its surroundings, how it will be used, and the level of finish expected by the client.\n\nFrom planning and construction through the finishing details, the focus remains on creating a result that combines function, craftsmanship, and thoughtful execution.",
+          "alt": "Temporary visual reference for a private custom pool"
         },
         {
-          number: '04',
-          title: 'Property Maintenance',
-          description: 'Ongoing property care focused on continuity, coordination and attention to the details that protect the home.',
-          alt: 'Temporary visual reference for residential property care'
+          "number": "04",
+          "title": "Property Care & Maintenance",
+          "description": "Care that continues beyond construction.\n\nConstruction Company provides ongoing property care and maintenance for owners who want a reliable point of contact when their property requires attention.\n\nNeeds are evaluated individually, allowing the company to coordinate practical solutions based on the property and the work required rather than forcing every client into the same maintenance package.\n\nFor owners who live abroad or spend extended periods away from their property, this provides continuity with a team already familiar with construction, renovation, and the long-term needs of the property.",
+          "alt": "Temporary visual reference for residential property care"
         }
       ]
     },
     poolExpertise: {
-      eyebrow: 'Custom Pool Expertise',
-      headline: 'Pool expertise, built into the project.',
-      body: 'Pool construction is considered as part of the property, not as an afterthought. Structure, finishes, water systems and the surrounding architecture are coordinated so every element works together.',
-      statement: 'A private pool should feel inseparable from the residence, landscape and way the property is used.'
+      eyebrow: "Custom Pools & Jacuzzis",
+      headline: "Designed for the property. Built for the experience.",
+      body: "Pools and jacuzzis are a core area of Construction Company's hands-on experience.\n\nEach project is approached as part of the property itself, considering how the new space will connect with its surroundings, how it will be used, and the level of finish expected by the client.",
+      statement: "From planning and construction through the finishing details, the focus remains on creating a result that combines function, craftsmanship, and thoughtful execution."
     },
     whyCompany: {
       eyebrow: 'Why Construction Company',
       headline: 'High standards, clear communication and local care.',
-      intro: 'Thoughtful execution depends on more than craftsmanship. It requires local understanding, clear decisions and close attention throughout the work.',
+      intro: "Trust, quality, solutions, creativity, and communication guide the work.",
       items: [
-        { n: '01', title: 'Local Knowledge', description: 'An understanding of tropical conditions, materials and the realities of building on Costa Rica’s South Pacific.' },
-        { n: '02', title: 'Direct Communication', description: 'Clear conversations, defined next steps and a direct point of contact throughout the project.' },
-        { n: '03', title: 'Integrated Services', description: 'Construction, renovations, custom pools and property care considered as one connected scope.' },
-        { n: '04', title: 'Attention to Detail', description: 'Careful coordination of materials, finishes and the decisions that shape the completed property.' }
+        {
+          "n": "01",
+          "title": "12 Years of Hands-On Experience",
+          "description": "Jason's experience was built on site, progressing from hands-on construction work to personally overseeing projects today."
+        },
+        {
+          "n": "02",
+          "title": "Personal Project Oversight",
+          "description": "Jason remains directly involved in the projects Construction Company takes on, providing clients with a clear point of responsibility throughout the work."
+        },
+        {
+          "n": "03",
+          "title": "Quality & Creative Solutions",
+          "description": "Every property presents different challenges. The approach combines quality workmanship with practical and creative solutions tailored to each project."
+        },
+        {
+          "n": "04",
+          "title": "Clear Communication & Trust",
+          "description": "Clear communication is treated as part of the work itself, helping clients understand the process, decisions, and progress of their project."
+        }
       ]
     },
     approach: {
       eyebrow: 'How We Work',
       headline: 'A personal, transparent path from conversation to completion.',
       phases: [
-        { n: '01', title: 'Conversation', body: 'Site walk, goals, and constraints clarified before a single line is drawn.' },
-        { n: '02', title: 'Assessment & Proposal', body: 'Clear drawings, material direction, and transparent cost planning.' },
-        { n: '03', title: 'Execution', body: 'Disciplined construction with regular updates and quality checkpoints.' },
-        { n: '04', title: 'Completion & Care', body: 'Final walkthrough, documentation, and optional long-term property care.' }
+        {
+          "n": "01",
+          "title": "Initial Consultation",
+          "body": "Every project starts with a conversation.\n\nWe begin by understanding the property, the client's goals, priorities, and the general scope of the project. This first conversation allows us to establish a clear starting point and determine the next steps."
+        },
+        {
+          "n": "02",
+          "title": "Site Visit & Preliminary Estimate",
+          "body": "Understanding the project on site.\n\nOnce the initial scope is understood, we visit the property to evaluate the existing conditions and better understand what the project will require.\n\nBased on this assessment, we can provide a preliminary estimate before moving into the detailed proposal."
+        },
+        {
+          "n": "03",
+          "title": "Formal Proposal",
+          "body": "A clear scope before the work begins.\n\nAfter evaluating the project, we prepare a formal proposal based on the defined scope and requirements.\n\nThis gives the client a clearer understanding of the work being considered before proceeding to planning and execution."
+        },
+        {
+          "n": "04",
+          "title": "Design & Planning",
+          "body": "Turning the scope into a plan.\n\nWith the project defined, we move into the planning required for execution, coordinating the design, technical considerations, and project requirements according to the nature of the work.\n\nThe objective is to establish a clear path forward before construction begins."
+        },
+        {
+          "n": "05",
+          "title": "Construction & Oversight",
+          "body": "The plan becomes reality.\n\nOnce the project is ready to move forward, construction begins with attention to quality, execution, and communication throughout the process.\n\nJason remains personally involved in project oversight, helping maintain a direct connection between the client, the decisions being made, and the work taking place on site."
+        },
+        {
+          "n": "06",
+          "title": "Delivery & Follow-Up",
+          "body": "Our involvement doesn't have to end at delivery.\n\nOnce the work is completed, the project moves through final review and delivery.\n\nWhen the property requires continued attention afterward, Construction Company can remain involved through follow-up, property care, and maintenance according to the client's needs."
+        }
       ]
     },
     remoteOwners: {
       eyebrow: 'Remote Owners & Investors',
-      headline: 'Confidence, even when you’re away.',
-      body: 'Whether you are building, improving or caring for a property from abroad, communication and local oversight should remain clear, personal and easy to follow.',
-      statement: 'Your property. One trusted local partner.'
+      headline: "Your property is in Costa Rica. You don't always have to be.",
+      body: "Owning, building, or investing in property from another country requires more than quality construction. It requires communication, visibility, and someone you can trust on the ground.\n\nConstruction Company works with homeowners, investors, vacation rental owners, developers, and property managers who need a reliable local point of contact for their projects and properties in Costa Rica.\n\nWith direct project oversight and clear communication throughout the process, our goal is to help clients stay informed and confident in the decisions being made, even when they cannot be physically present.\n\nAnd when construction is complete, that relationship can continue through property care and maintenance whenever needed.",
+      statement: "Based in Costa Rica. Building and caring for exceptional properties nationwide."
     },
     companyStory: {
       eyebrow: 'Company Story',
-      headline: 'Premium work, built on personal responsibility.',
-      intro: 'This section will introduce the founder’s background, connection to Uvita and personal approach to the work once the information has been confirmed.',
+      headline: "Built from the ground up.",
+      intro: "Jason Cascante began his career in construction where the work happens: on site, starting as a laborer and learning the trade from the ground up.\n\nOver the next 12 years, he worked his way forward through hands-on experience, developing his expertise across remodeling, custom pools, jacuzzis, detailed finishes, and residential construction.\n\nThat experience eventually led him to establish Construction Company with a straightforward philosophy: earn trust through quality work, clear communication, creative solutions, and personal responsibility.\n\nToday, Jason remains directly involved in the projects the company takes on, personally overseeing the work and bringing more than a decade of practical construction experience to every project.\n\nFor clients, that means working with someone who understands construction not only from plans and estimates, but from years spent doing the work itself.",
       placeholders: [
         { label: 'Founder name to be added' },
         { label: 'Founder biography to be added' },
@@ -154,8 +208,8 @@ const translations = {
       meta: 'Client name to be added · Project type to be added · Location to be confirmed'
     },
     location: {
-      headline: 'Serving Uvita and Costa Rica’s South Pacific.',
-      body: 'Confirmed service locations to be added.'
+      headline: "Building throughout Costa Rica.",
+      body: "Construction Company serves homeowners, investors, developers, and property managers across Costa Rica.\n\nEvery project is evaluated individually based on its location, scope, and requirements, allowing us to bring the same focus on quality, communication, and personal oversight wherever the work takes us."
     },
     finalCta: {
       headline: 'Let’s talk about your property.',
@@ -163,13 +217,13 @@ const translations = {
       cta: 'Discuss Your Project'
     },
     footer: {
-      desc: 'Luxury Construction & Property Care',
-      location: 'Uvita, Costa Rica',
+      desc: "Luxury Construction & Property Care in Costa Rica",
+      location: "Costa Rica · Nationwide service",
       explore: 'Explore',
       services: 'Services',
       contact: 'Contact',
       copyright: 'Construction Company',
-      phonePlaceholder: 'Phone / WhatsApp to be added'
+      phonePlaceholder: "+506 8539 6979"
     },
     accessibility: {
       openMenu: 'Open menu',
@@ -182,7 +236,7 @@ const translations = {
       tempVisualRef: 'Temporary visual reference — replace with client work',
       imageHero: 'Luxury hillside villa with infinity pool in Costa Rica',
       imagePool: 'Infinity pool overlooking rainforest',
-      imageArchitect: 'Project architect on site',
+      imageArchitect: "Temporary on-site construction reference",
       imageVanity: 'Warm wood vanity detail',
       imagePlans: 'Reviewing construction plans',
       imageVillaPool: 'Villa with infinity pool at dusk',
@@ -204,8 +258,8 @@ const translations = {
   },
   es: {
     seo: {
-      title: 'Construction Company | Construcción de lujo y cuidado de propiedades en Uvita',
-      description: 'Construcción de lujo, remodelaciones, piscinas a medida y cuidado de propiedades en Uvita y el Pacífico Sur de Costa Rica.'
+      title: "Construction Company | Construcción de Alto Nivel y Cuidado de Propiedades en Costa Rica",
+      description: "Construcción de alto nivel, remodelación, piscinas y jacuzzis personalizados, y cuidado y mantenimiento de propiedades en todo Costa Rica."
     },
     header: {
       company: 'Construction',
@@ -231,21 +285,21 @@ const translations = {
         { text: 'Excepcionales', accent: true, br: false },
         { text: '.', br: false }
       ],
-      supporting: 'Construcción y cuidado de propiedades de principio a fin para propietarios que esperan claridad, artesanía y valor duradero en Costa Rica.',
+      supporting: "Construcción, remodelación, piscinas personalizadas y cuidado de propiedades en todo Costa Rica, respaldados por 12 años de experiencia práctica, supervisión personal y comunicación clara de principio a fin.",
       ctaDiscuss: 'Hablemos de su proyecto',
       ctaView: 'Ver proyectos seleccionados',
       trustMarkers: [
-        'Gestión directa. Presencia local.',
-        'Presupuestos y plazos transparentes',
-        'Líder de proyecto dedicado desde el primer día'
+        "12 años de experiencia práctica de Jason",
+        "Supervisión personal de proyectos",
+        "Comunicación clara de principio a fin"
       ]
     },
     capabilities: [
-      'Construcción de lujo',
-      'Remodelación y renovación',
-      'Piscinas a medida',
-      'Cuidado de propiedades'
-    ],
+        "Construcción de Alto Nivel",
+        "Remodelación y Renovación",
+        "Piscinas y Jacuzzis Personalizados",
+        "Cuidado y Mantenimiento de Propiedades"
+      ],
     projects: {
       eyebrow: 'Proyectos Seleccionados',
       headline: 'Espacios definidos por la visión, el lugar y el propósito.',
@@ -268,12 +322,24 @@ const translations = {
     trustedPartner: {
       eyebrow: 'Un socio local de confianza',
       headline: 'Un solo socio local de confianza, desde la construcción hasta el cuidado a largo plazo.',
-      body: 'Desde la primera conversación hasta la construcción y el cuidado continuo, cada etapa se guía mediante comunicación directa, supervisión personal y experiencia coordinada.',
+      body: "Jason Cascante supervisa personalmente los proyectos, con un enfoque en confianza, calidad, soluciones creativas y comunicación clara.",
       principles: [
-        { title: 'Comunicación directa', body: 'Conversaciones claras y actualizaciones prácticas durante todo el trabajo.' },
-        { title: 'Supervisión personal', body: 'Atención cercana a las decisiones, los detalles y la coordinación diaria.' },
-        { title: 'Experiencia integral', body: 'Construcción, remodelación, piscinas y cuidado de propiedades considerados en conjunto.' },
-        { title: 'Cuidado de propiedades a largo plazo', body: 'Apoyo pensado para continuar después de finalizar el proyecto.' }
+        {
+          "title": "12 años de experiencia práctica",
+          "body": "La experiencia de Jason se construyó directamente en obra, avanzando desde el trabajo práctico en construcción hasta la supervisión personal de proyectos en la actualidad."
+        },
+        {
+          "title": "Supervisión personal de proyectos",
+          "body": "Jason se mantiene directamente involucrado en los proyectos de Construction Company, brindando a los clientes un punto claro de responsabilidad durante el desarrollo del trabajo."
+        },
+        {
+          "title": "Calidad y soluciones creativas",
+          "body": "Cada propiedad presenta retos diferentes. El enfoque combina trabajo de calidad con soluciones prácticas y creativas adaptadas a cada proyecto."
+        },
+        {
+          "title": "Comunicación clara y confianza",
+          "body": "La comunicación clara se considera parte del trabajo, ayudando a los clientes a comprender el proceso, las decisiones y el avance de su proyecto."
+        }
       ]
     },
     services: {
@@ -282,68 +348,110 @@ const translations = {
       temporaryLabel: 'Referencia visual temporal del servicio — reemplazar con fotografías del cliente',
       list: [
         {
-          number: '01',
-          title: 'Construcción de lujo',
-          description: 'Construcción residencial coordinada con cuidado para propiedades definidas por la arquitectura, el paisaje y su uso a largo plazo.',
-          alt: 'Referencia visual temporal de construcción residencial de lujo'
+          "number": "01",
+          "title": "Construcción de Alto Nivel",
+          "description": "Construido con propósito. Ejecutado con cuidado.\n\nDesde la planificación inicial hasta la construcción y los acabados finales, Construction Company desarrolla proyectos residenciales con un enfoque en calidad, comunicación y atención al detalle.\n\nCada proyecto se aborda de manera individual, coordinando el trabajo necesario para convertir la visión del cliente en realidad y manteniendo una comunicación clara durante todo el proceso.\n\nCon Jason involucrado personalmente en la supervisión de los proyectos, los clientes mantienen una conexión directa con la persona responsable de ejecutar el trabajo.",
+          "alt": "Referencia visual temporal de construcción residencial de lujo"
         },
         {
-          number: '02',
-          title: 'Remodelación y renovación',
-          description: 'Mejoras cuidadosamente consideradas para optimizar la función, la calidad de los materiales y el carácter de una propiedad existente.',
-          alt: 'Referencia visual temporal de una remodelación residencial refinada'
+          "number": "02",
+          "title": "Remodelación y Renovación",
+          "description": "Transformamos lo que ya existe.\n\nConstruction Company aborda las remodelaciones con el mismo nivel de atención que una construcción nueva, adaptando espacios existentes a la manera en que sus propietarios desean vivir, utilizar o invertir en su propiedad.\n\nDesde mejoras específicas hasta transformaciones de mayor alcance, cada proyecto comienza con una evaluación de la propiedad existente y una comprensión clara del resultado que se desea alcanzar.\n\nEl objetivo no es simplemente hacer que un espacio luzca diferente, sino aportar soluciones bien pensadas, acabados de calidad y mejoras que se integren naturalmente con la propiedad en su conjunto.",
+          "alt": "Referencia visual temporal de una remodelación residencial refinada"
         },
         {
-          number: '03',
-          title: 'Piscinas a medida',
-          description: 'Piscinas privadas planificadas como parte de la residencia, su estructura y el paisaje circundante.',
-          alt: 'Referencia visual temporal de una piscina privada a medida'
+          "number": "03",
+          "title": "Piscinas y Jacuzzis Personalizados",
+          "description": "Diseñados para la propiedad. Construidos para disfrutarlos.\n\nLas piscinas y los jacuzzis forman parte de las principales áreas de experiencia práctica de Construction Company.\n\nCada proyecto se aborda como parte integral de la propiedad, considerando cómo el nuevo espacio se relacionará con su entorno, cómo será utilizado y el nivel de acabado esperado por el cliente.\n\nDesde la planificación y construcción hasta los detalles finales, el enfoque se mantiene en crear un resultado que combine funcionalidad, calidad de ejecución y atención al detalle.",
+          "alt": "Referencia visual temporal de una piscina privada a medida"
         },
         {
-          number: '04',
-          title: 'Mantenimiento de propiedades',
-          description: 'Cuidado continuo de la propiedad enfocado en la continuidad, la coordinación y la atención a los detalles que protegen el hogar.',
-          alt: 'Referencia visual temporal de cuidado de una propiedad residencial'
+          "number": "04",
+          "title": "Cuidado y Mantenimiento de Propiedades",
+          "description": "El cuidado continúa después de la construcción.\n\nConstruction Company ofrece cuidado y mantenimiento de propiedades para propietarios que buscan un punto de contacto confiable cuando su propiedad requiere atención.\n\nCada necesidad se evalúa individualmente, permitiendo coordinar soluciones prácticas de acuerdo con la propiedad y el trabajo requerido, en lugar de limitar a todos los clientes a un mismo esquema de mantenimiento.\n\nPara propietarios que viven fuera del país o pasan largos períodos lejos de su propiedad, esto permite mantener continuidad con un equipo familiarizado con construcción, remodelación y las necesidades de la propiedad a largo plazo.",
+          "alt": "Referencia visual temporal de cuidado de una propiedad residencial"
         }
       ]
     },
     poolExpertise: {
-      eyebrow: 'Experiencia en piscinas a medida',
-      headline: 'Experiencia en piscinas, integrada al proyecto.',
-      body: 'La construcción de la piscina se considera como parte de la propiedad, no como un elemento añadido al final. La estructura, los acabados, los sistemas de agua y la arquitectura circundante se coordinan para que cada elemento funcione en conjunto.',
-      statement: 'Una piscina privada debe sentirse inseparable de la residencia, el paisaje y la forma en que se utiliza la propiedad.'
+      eyebrow: "Piscinas y Jacuzzis Personalizados",
+      headline: "Diseñados para la propiedad. Construidos para disfrutarlos.",
+      body: "Las piscinas y los jacuzzis forman parte de las principales áreas de experiencia práctica de Construction Company.\n\nCada proyecto se aborda como parte integral de la propiedad, considerando cómo el nuevo espacio se relacionará con su entorno, cómo será utilizado y el nivel de acabado esperado por el cliente.",
+      statement: "Desde la planificación y construcción hasta los detalles finales, el enfoque se mantiene en crear un resultado que combine funcionalidad, calidad de ejecución y atención al detalle."
     },
     whyCompany: {
       eyebrow: 'Por qué Construction Company',
       headline: 'Altos estándares, comunicación clara y cuidado local.',
-      intro: 'Una ejecución cuidadosa depende de más que la calidad del trabajo. Requiere conocimiento local, decisiones claras y atención cercana durante todo el proceso.',
+      intro: "La confianza, la calidad, las soluciones, la creatividad y la comunicación guían el trabajo.",
       items: [
-        { n: '01', title: 'Conocimiento local', description: 'Comprensión de las condiciones tropicales, los materiales y las realidades de construir en el Pacífico Sur de Costa Rica.' },
-        { n: '02', title: 'Comunicación directa', description: 'Conversaciones claras, próximos pasos definidos y un punto de contacto directo durante todo el proyecto.' },
-        { n: '03', title: 'Servicios integrados', description: 'Construcción, remodelaciones, piscinas a medida y cuidado de propiedades considerados como un alcance conectado.' },
-        { n: '04', title: 'Atención al detalle', description: 'Coordinación cuidadosa de materiales, acabados y decisiones que dan forma a la propiedad terminada.' }
+        {
+          "n": "01",
+          "title": "12 años de experiencia práctica",
+          "description": "La experiencia de Jason se construyó directamente en obra, avanzando desde el trabajo práctico en construcción hasta la supervisión personal de proyectos en la actualidad."
+        },
+        {
+          "n": "02",
+          "title": "Supervisión personal de proyectos",
+          "description": "Jason se mantiene directamente involucrado en los proyectos de Construction Company, brindando a los clientes un punto claro de responsabilidad durante el desarrollo del trabajo."
+        },
+        {
+          "n": "03",
+          "title": "Calidad y soluciones creativas",
+          "description": "Cada propiedad presenta retos diferentes. El enfoque combina trabajo de calidad con soluciones prácticas y creativas adaptadas a cada proyecto."
+        },
+        {
+          "n": "04",
+          "title": "Comunicación clara y confianza",
+          "description": "La comunicación clara se considera parte del trabajo, ayudando a los clientes a comprender el proceso, las decisiones y el avance de su proyecto."
+        }
       ]
     },
     approach: {
       eyebrow: 'Cómo Trabajamos',
       headline: 'Un camino personal y transparente, desde la conversación hasta la finalización.',
       phases: [
-        { n: '01', title: 'Conversación', body: 'Recorrido del sitio, objetivos y restricciones aclarados antes de dibujar una sola línea.' },
-        { n: '02', title: 'Evaluación y propuesta', body: 'Planos claros, dirección de materiales y planificación transparente de costos.' },
-        { n: '03', title: 'Ejecución', body: 'Construcción disciplinada con actualizaciones regulares y puntos de control de calidad.' },
-        { n: '04', title: 'Finalización y cuidado', body: 'Recorrido final, documentación y cuidado de propiedades a largo plazo opcional.' }
+        {
+          "n": "01",
+          "title": "Consulta Inicial",
+          "body": "Todo proyecto comienza con una conversación.\n\nComenzamos por conocer la propiedad, los objetivos del cliente, sus prioridades y el alcance general del proyecto. Esta primera conversación nos permite establecer un punto de partida claro y determinar los siguientes pasos."
+        },
+        {
+          "n": "02",
+          "title": "Visita y Estimación Preliminar",
+          "body": "Entendiendo el proyecto directamente en el sitio.\n\nUna vez definido el alcance inicial, visitamos la propiedad para evaluar las condiciones existentes y comprender mejor lo que requerirá el proyecto.\n\nA partir de esta evaluación podemos proporcionar una estimación preliminar antes de avanzar hacia la propuesta detallada."
+        },
+        {
+          "n": "03",
+          "title": "Propuesta Formal",
+          "body": "Un alcance claro antes de comenzar.\n\nDespués de evaluar el proyecto, preparamos una propuesta formal basada en el alcance y los requerimientos definidos.\n\nEsto permite que el cliente tenga una visión más clara del trabajo contemplado antes de avanzar hacia la planificación y ejecución."
+        },
+        {
+          "n": "04",
+          "title": "Diseño y Planificación",
+          "body": "Convertimos el alcance en un plan.\n\nCon el proyecto definido, avanzamos hacia la planificación necesaria para su ejecución, coordinando el diseño, las consideraciones técnicas y los requerimientos del proyecto de acuerdo con la naturaleza del trabajo.\n\nEl objetivo es establecer una ruta clara antes de comenzar la construcción."
+        },
+        {
+          "n": "05",
+          "title": "Construcción y Supervisión",
+          "body": "El plan se convierte en realidad.\n\nUna vez que el proyecto está listo para avanzar, comienza la construcción con atención a la calidad, la ejecución y la comunicación durante todo el proceso.\n\nJason se mantiene involucrado personalmente en la supervisión del proyecto, ayudando a mantener una conexión directa entre el cliente, las decisiones que se toman y el trabajo que se desarrolla en obra."
+        },
+        {
+          "n": "06",
+          "title": "Entrega y Seguimiento",
+          "body": "Nuestro trabajo no necesariamente termina con la entrega.\n\nUna vez finalizados los trabajos, el proyecto pasa por su revisión final y entrega.\n\nCuando la propiedad requiere atención posterior, Construction Company puede continuar involucrada mediante seguimiento, cuidado y mantenimiento de acuerdo con las necesidades del cliente."
+        }
       ]
     },
     remoteOwners: {
       eyebrow: 'Propietarios remotos e inversionistas',
-      headline: 'Confianza, incluso cuando está lejos.',
-      body: 'Ya sea que esté construyendo, mejorando o cuidando una propiedad desde el extranjero, la comunicación y la supervisión local deben mantenerse claras, personales y fáciles de seguir.',
-      statement: 'Su propiedad. Un solo socio local de confianza.'
+      headline: "Tu propiedad está en Costa Rica. Tú no siempre tienes que estarlo.",
+      body: "Tener, construir o invertir en una propiedad desde otro país requiere más que un trabajo de calidad. Requiere comunicación, visibilidad y alguien de confianza presente en Costa Rica.\n\nConstruction Company trabaja con propietarios, inversionistas, dueños de alquileres vacacionales, desarrolladores y administradores de propiedades que necesitan un punto de contacto local confiable para sus proyectos y propiedades en el país.\n\nMediante supervisión directa y comunicación clara durante el proceso, nuestro objetivo es que los clientes puedan mantenerse informados y seguros de las decisiones que se toman, incluso cuando no pueden estar físicamente presentes.\n\nY cuando la construcción termina, esa relación puede continuar mediante el cuidado y mantenimiento de la propiedad cuando sea necesario.",
+      statement: "En Costa Rica. Construyendo y cuidando propiedades excepcionales en todo el país."
     },
     companyStory: {
       eyebrow: 'Historia de la empresa',
-      headline: 'Trabajo premium, basado en la responsabilidad personal.',
-      intro: 'Esta sección presentará la trayectoria del fundador, su vínculo con Uvita y su enfoque personal del trabajo una vez que la información haya sido confirmada.',
+      headline: "Construido desde los cimientos.",
+      intro: "Jason Cascante comenzó su carrera en la construcción desde donde realmente se aprende el oficio: en la obra, iniciando como peón y adquiriendo experiencia desde las bases.\n\nDurante los siguientes 12 años fue creciendo profesionalmente a través de la experiencia práctica, desarrollando conocimientos en remodelaciones, piscinas personalizadas, jacuzzis, acabados y construcción residencial.\n\nEse recorrido lo llevó posteriormente a fundar Construction Company bajo una filosofía sencilla: construir confianza mediante trabajo de calidad, comunicación clara, soluciones creativas y responsabilidad personal.\n\nActualmente, Jason continúa involucrándose directamente en los proyectos de la empresa, supervisando personalmente los trabajos y aportando más de una década de experiencia práctica en construcción a cada proyecto.\n\nPara sus clientes, esto significa trabajar con alguien que conoce la construcción no solamente desde los planos y las cotizaciones, sino desde años de experiencia directa en obra.",
       placeholders: [
         { label: 'Nombre del fundador pendiente' },
         { label: 'Biografía del fundador pendiente' },
@@ -358,8 +466,8 @@ const translations = {
       meta: 'Nombre del cliente pendiente · Tipo de proyecto pendiente · Ubicación por confirmar'
     },
     location: {
-      headline: 'Atendemos Uvita y el Pacífico Sur de Costa Rica.',
-      body: 'Zonas de servicio confirmadas pendientes.'
+      headline: "Construimos en todo Costa Rica.",
+      body: "Construction Company atiende a propietarios, inversionistas, desarrolladores y administradores de propiedades en todo Costa Rica.\n\nCada proyecto se evalúa individualmente según su ubicación, alcance y requerimientos, permitiéndonos mantener el mismo enfoque en calidad, comunicación y supervisión personal dondequiera que se desarrolle el trabajo."
     },
     finalCta: {
       headline: 'Hablemos de su propiedad.',
@@ -367,13 +475,13 @@ const translations = {
       cta: 'Hablemos de su proyecto'
     },
     footer: {
-      desc: 'Construcción de lujo y cuidado de propiedades',
-      location: 'Uvita, Costa Rica',
+      desc: "Construcción de Alto Nivel y Cuidado de Propiedades en Costa Rica",
+      location: "Costa Rica · Servicio en todo el país",
       explore: 'Explorar',
       services: 'Servicios',
       contact: 'Contacto',
       copyright: 'Construction Company',
-      phonePlaceholder: 'Teléfono / WhatsApp pendiente'
+      phonePlaceholder: "+506 8539 6979"
     },
     accessibility: {
       openMenu: 'Abrir menú',
@@ -386,7 +494,7 @@ const translations = {
       tempVisualRef: 'Referencia visual temporal — reemplazar con trabajos del cliente',
       imageHero: 'Villa de lujo en ladera con piscina infinita en Costa Rica',
       imagePool: 'Piscina infinita con vista a la selva tropical',
-      imageArchitect: 'Arquitecto del proyecto en el sitio',
+      imageArchitect: "Referencia temporal de construcción en obra",
       imageVanity: 'Detalle de tocador de madera cálida',
       imagePlans: 'Revisión de planos de construcción',
       imageVillaPool: 'Villa con piscina infinita al anochecer',
