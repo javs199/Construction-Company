@@ -23,7 +23,7 @@ logger.error = (msg, options) => {
 }
 
 export default defineConfig({
-	base: '/Construction-Company/',
+	base: process.env.VITE_BASE_PATH || '/',
 	optimizeDeps: {
 		include: allDeps,
 	},
@@ -55,6 +55,7 @@ export default defineConfig({
 		},
 	},
 	build: {
+		outDir: process.env.BUILD_OUT_DIR || 'dist',
 		rollupOptions: {
 			external: [
 				'@babel/parser',

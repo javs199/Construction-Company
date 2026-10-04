@@ -1,13 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { SITE_URL, SOCIAL_IMAGE_URL } from '@/config/site';
 
 // Social and canonical tags; the page owns its localized title and description.
 const Seo = ({ title, description, image, imageAlt, url, siteName, type = 'website' }) => {
-    const origin = typeof window !== 'undefined' ? window.location.origin : '';
-    const socialImage = image || (origin ? new URL(`${import.meta.env.BASE_URL}social/og-construction-company.jpg`, origin).href : undefined);
-    const path = typeof window !== 'undefined' ? window.location.pathname : '';
-    const cleanPath = path.length > 1 && path.endsWith('/') ? path.slice(0, -1) : path;
-    const canonical = url || (origin + cleanPath);
+    const socialImage = image || SOCIAL_IMAGE_URL;
+    const canonical = url || SITE_URL;
 
     return (
         <Helmet>

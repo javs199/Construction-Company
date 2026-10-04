@@ -40,6 +40,9 @@ jobs:
         run: npm run lint
 
       - name: Build
+        env:
+          VITE_BASE_PATH: /Construction-Company/
+          BUILD_OUT_DIR: ../../dist/apps/web
         run: npm run build
 
       - name: Upload artifact
