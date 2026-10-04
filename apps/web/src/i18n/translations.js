@@ -2,7 +2,8 @@ const translations = {
   en: {
     seo: {
       title: "Construction Company | Luxury Construction & Property Care in Costa Rica",
-      description: "Luxury construction, remodeling, custom pools and jacuzzis, and property care and maintenance throughout Costa Rica."
+      description: "Luxury construction, remodeling, custom pools and jacuzzis, and property care and maintenance throughout Costa Rica.",
+      imageAlt: "Construction Company project and brand identity in Costa Rica."
     },
     header: {
       company: 'Construction',
@@ -250,7 +251,8 @@ const translations = {
   es: {
     seo: {
       title: "Construction Company | Construcción de Alto Nivel y Cuidado de Propiedades en Costa Rica",
-      description: "Construcción de alto nivel, remodelación, piscinas y jacuzzis personalizados, y cuidado y mantenimiento de propiedades en todo Costa Rica."
+      description: "Construcción de alto nivel, remodelación, piscinas y jacuzzis personalizados, y cuidado y mantenimiento de propiedades en todo Costa Rica.",
+      imageAlt: "Proyecto e identidad de marca de Construction Company en Costa Rica."
     },
     header: {
       company: 'Construction',

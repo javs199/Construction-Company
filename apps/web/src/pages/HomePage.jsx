@@ -191,6 +191,7 @@ export default function HomePage() {
         title={t('seo.title')}
         description={t('seo.description')}
         siteName={t('footer.copyright')}
+        imageAlt={t('seo.imageAlt')}
       />
 
       <a href="#main-content" className="sr-only focus-visible:not-sr-only focus-visible:absolute focus-visible:z-[100] focus-visible:top-4 focus-visible:left-4 focus-visible:rounded-sm focus-visible:bg-primary focus-visible:px-4 focus-visible:py-2 focus-visible:text-primary-foreground focus-visible:outline-none">

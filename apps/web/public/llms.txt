@@ -1,2 +1,2 @@
 ## Pages
-- [Construction Company | Luxury Construction & Property Care in Costa Rica](/): Luxury construction, remodeling, custom pools and jacuzzis, and property care and maintenance throughout Costa Rica.
+- [Construction Company | Luxury Construction & Property Care in Costa Rica](./): Luxury construction, remodeling, custom pools and jacuzzis, and property care and maintenance throughout Costa Rica.

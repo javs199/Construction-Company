@@ -137,7 +137,7 @@ function generateFallbackUrl(fileName) {
 function generateLlmsTxt(pages) {
 	const sortedPages = pages.sort((a, b) => a.title.localeCompare(b.title));
 	const pageEntries = sortedPages.map(page =>
-		`- [${page.title}](${page.url}): ${page.description}`
+		`- [${page.title}](./${page.url.replace(/^\/+/, '')}): ${page.description}`
 	).join('\n');
 
 	return `## Pages\n${pageEntries}`;
