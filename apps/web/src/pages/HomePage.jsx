@@ -7,17 +7,21 @@ import Seo from '@/components/Seo';
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/i18n/LanguageContext';
 
+const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
+
 const IMG = {
-  hero: 'https://images.hostinger.com/b45d5566-e15c-497d-9d55-9d2e0d0bb577.png',
-  pool: 'https://images.hostinger.com/b2c03542-d035-40ff-b2ef-f357d60eed3f.png',
-  architect: 'https://images.hostinger.com/6e51037b-acff-4d87-9fa8-6ec211887b5a.png',
-  villaBw: 'https://images.hostinger.com/840c78ba-08e9-4786-a523-decd4b04715c.png',
-  bathBw: 'https://images.hostinger.com/3367f020-0354-45fb-9ca9-328c74af7d31.png',
-  terraceBw: 'https://images.hostinger.com/adad3f06-f110-4552-902c-6500c50e2c55.png',
-  plans: 'https://images.hostinger.com/2493da16-6c92-451d-946a-013eb903bc4d.png',
-  villaPool: 'https://images.hostinger.com/2bb55de1-2bb4-4f1d-971b-43ee4e4e0386.png',
-  meeting: 'https://images.hostinger.com/928533e3-7039-438f-80c8-798c9ec6df9f.png',
-  coast: 'https://images.hostinger.com/c0f2c670-85a7-498a-abe8-e6f1e3fd36de.png',
+  carabao: asset('images/hero/carabao-villa-hero.webp'),
+  pool: asset('images/services/custom-pools.jpg'),
+  construction: asset('images/supporting/construction-process.jpg'),
+  casaDapezi: asset('images/portfolio/casa-dapezi-construction.jpg'),
+  lasOlas: asset('images/portfolio/las-olas-residence.jpg'),
+  luxuryConstruction: asset('images/services/luxury-construction.jpg'),
+  remodeling: asset('images/services/remodeling-renovation.jpg'),
+  propertyCare: asset('images/services/property-care.webp'),
+  team: asset('images/supporting/team-on-site.jpg'),
+  jason: asset('images/about/jason-cascante.webp'),
+  remoteOwners: asset('images/supporting/remote-owners-carabao.jpg'),
+  propertyCareSupport: asset('images/supporting/property-care-support.jpg'),
 };
 
 function LanguageToggle({ className }) {
@@ -89,9 +93,12 @@ function Header() {
   return (
     <header className="absolute inset-x-0 top-0 z-50">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5 md:px-8 lg:px-10">
-        <a href="#top" className="font-sans-body text-[11px] font-semibold uppercase tracking-[0.28em] text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-background rounded-sm">
-          {t('header.company')}
-          <span className="block tracking-[0.32em] text-muted-foreground">{t('header.descriptor')}</span>
+        <a href="#top" className="block h-10 w-10 shrink-0 sm:h-9 sm:w-44 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-background rounded-sm">
+          <span className="sr-only">{t('footer.copyright')}</span>
+          <img src={asset('branding/isotipo_claro_transparente.svg')} alt="" aria-hidden="true" width="220" height="220" className="h-full w-full object-contain sm:hidden dark:hidden" />
+          <img src={asset('branding/isotipo_oscuro_transparente.svg')} alt="" aria-hidden="true" width="220" height="220" className="hidden h-full w-full object-contain dark:block sm:dark:hidden" />
+          <img src={asset('branding/imagotipo_claro_transparente.svg')} alt="" aria-hidden="true" width="1675" height="342" className="hidden h-full w-full object-contain sm:block dark:sm:hidden" />
+          <img src={asset('branding/imagotipo_oscuro_transparente.svg')} alt="" aria-hidden="true" width="1675" height="342" className="hidden h-full w-full object-contain dark:sm:block" />
         </a>
         <nav className="hidden items-center gap-8 lg:flex">
           {Array.isArray(nav) && nav.map((item) => (
@@ -161,7 +168,7 @@ export default function HomePage() {
   const approachPhases = t('approach.phases');
   const nav = t('navigation');
   
-  const projectImgs = [IMG.villaBw, IMG.bathBw, IMG.terraceBw];
+  const projectImgs = [IMG.casaDapezi, IMG.carabao, IMG.lasOlas];
 
   return (
     <div id="top" className="min-h-[100dvh] bg-background text-foreground">
@@ -233,14 +240,14 @@ export default function HomePage() {
             <Reveal delay={0.1}>
               <div className="relative">
                 <div className="overflow-hidden rounded-sm">
-                  <img src={IMG.hero} alt={t('accessibility.imageHero')} fetchpriority="high" className="aspect-[16/10] w-full object-cover" />
+                  <img src={IMG.carabao} alt={t('accessibility.imageHero')} fetchpriority="high" className="aspect-[16/10] w-full object-cover" />
                 </div>
                 <div className="mt-3 grid grid-cols-2 gap-3 sm:absolute sm:-bottom-8 sm:right-0 sm:mt-0 sm:w-[55%] sm:grid-cols-2">
                   <div className="overflow-hidden rounded-sm border border-border/60 shadow-lg">
                     <img src={IMG.pool} alt={t('accessibility.imagePool')} className="aspect-[4/3] w-full object-cover" />
                   </div>
                   <div className="overflow-hidden rounded-sm border border-border/60 shadow-lg">
-                    <img src={IMG.architect} alt={t('accessibility.imageArchitect')} className="aspect-[4/3] w-full object-cover object-top" />
+                    <img src={IMG.construction} alt={t('accessibility.imageConstruction')} className="aspect-[4/3] w-full object-cover object-top" />
                   </div>
                 </div>
               </div>
@@ -288,14 +295,11 @@ export default function HomePage() {
                   <div className="group relative overflow-hidden rounded-sm bg-muted">
                     <img
                       src={projectImgs[i]}
-                      alt={p.title}
+                      alt={p.alt}
                       loading="lazy"
                       decoding="async"
                       className="aspect-[4/3] w-full object-cover grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0"
                     />
-                    <div className="absolute bottom-2 left-2 right-2 rounded bg-background/80 px-2 py-1 text-center font-sans-body text-[10px] text-foreground backdrop-blur-sm">
-                      {t('accessibility.tempVisualRef')}
-                    </div>
                   </div>
                   <div className="mt-4 flex items-start justify-between gap-3">
                     <div>
@@ -315,10 +319,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl items-start gap-12 px-5 md:grid-cols-2 md:gap-16 md:px-8 lg:px-10">
           <Reveal>
             <div className="relative">
-              <img src={IMG.plans} alt={t('accessibility.imagePlans')} loading="lazy" decoding="async" className="aspect-[3/4] w-full rounded-sm object-cover" />
-              <p className="mt-3 font-sans-body text-[11px] uppercase tracking-wider" style={{ color: 'var(--tp-muted)' }}>
-                {t('accessibility.tempImagePartner')}
-              </p>
+              <img src={IMG.team} alt={t('accessibility.imageTeam')} loading="lazy" decoding="async" className="aspect-[3/4] w-full rounded-sm object-cover object-left" />
             </div>
           </Reveal>
           <Reveal delay={0.1}>
@@ -355,16 +356,13 @@ export default function HomePage() {
           <div className="flex flex-col gap-20 md:gap-32">
             {Array.isArray(servicesList) && servicesList.map((s, i) => {
               const isEven = i % 2 === 0;
-              const servicesImgs = [IMG.villaBw, IMG.bathBw, IMG.villaPool, IMG.architect];
+              const servicesImgs = [IMG.luxuryConstruction, IMG.remodeling, IMG.pool, IMG.propertyCare];
               return (
                 <article key={s.title} className="group">
                   <Reveal>
                     <div className="grid items-center gap-10 md:grid-cols-12 md:gap-16 lg:gap-20">
                       <div className={cn("md:col-span-7", !isEven && "md:order-2")}>
-                        <img src={servicesImgs[i]} alt={s.alt} loading="lazy" decoding="async" className="aspect-[4/3] w-full rounded-sm object-cover" />
-                        <p className="mt-3 font-sans-body text-[10px] uppercase tracking-wider text-muted-foreground">
-                          {t('services.temporaryLabel')}
-                        </p>
+                        <img src={servicesImgs[i]} alt={s.alt} loading="lazy" decoding="async" className={cn("aspect-[4/3] w-full rounded-sm object-cover", i === 0 && "object-top")} />
                       </div>
                       <div className={cn("md:col-span-5 md:px-2 lg:px-4", !isEven && "md:order-1")}>
                         <div className="flex flex-col gap-5 border-l pl-6 border-gold">
@@ -395,9 +393,6 @@ export default function HomePage() {
           <Reveal className="md:col-span-7">
             <div className="relative">
               <img src={IMG.pool} alt={t('accessibility.altImagePool')} loading="lazy" decoding="async" className="aspect-[4/3] w-full rounded-sm object-cover" />
-              <p className="mt-3 font-sans-body text-[11px] uppercase tracking-wider text-muted-foreground">
-                {t('accessibility.tempImagePool')}
-              </p>
             </div>
           </Reveal>
           <Reveal delay={0.1} className="md:col-span-5">
@@ -493,16 +488,10 @@ export default function HomePage() {
           </Reveal>
           <Reveal delay={0.1} className="md:col-span-7">
             <div className="relative">
-              <img src={IMG.villaPool} alt={t('accessibility.altImageRemotePrimary')} loading="lazy" decoding="async" className="aspect-[4/3] w-full rounded-sm object-cover" />
-              <p className="mt-3 font-sans-body text-[11px] uppercase tracking-wider" style={{ color: 'var(--tp-muted)' }}>
-                {t('accessibility.tempImageRemotePrimary')}
-              </p>
+              <img src={IMG.remoteOwners} alt={t('accessibility.altImageRemotePrimary')} loading="lazy" decoding="async" className="aspect-[4/3] w-full rounded-sm object-cover" />
               
               <div className="mt-8 w-full md:absolute md:-bottom-12 md:-left-12 md:mt-0 md:w-[60%] lg:-left-16 lg:-bottom-16">
-                <img src={IMG.meeting} alt={t('accessibility.altImageRemoteSecondary')} loading="lazy" decoding="async" className="aspect-[4/3] w-full rounded-sm object-cover md:border-8" style={{ borderColor: 'var(--tp-bg)' }} />
-                <p className="mt-2 font-sans-body text-[10px] uppercase tracking-wider" style={{ color: 'var(--tp-muted)' }}>
-                  {t('accessibility.tempImageRemoteSecondary')}
-                </p>
+                <img src={IMG.propertyCareSupport} alt={t('accessibility.altImageRemoteSecondary')} loading="lazy" decoding="async" className="aspect-[4/3] w-full rounded-sm object-cover md:border-8" style={{ borderColor: 'var(--tp-bg)' }} />
               </div>
             </div>
           </Reveal>
@@ -513,10 +502,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl items-start gap-12 px-5 md:grid-cols-12 md:gap-16 md:px-8 lg:px-10">
           <Reveal className="md:col-span-5">
             <div className="relative">
-              <img src={IMG.plans} alt={t('accessibility.altImageFounder')} loading="lazy" decoding="async" className="aspect-[3/4] w-full rounded-sm object-cover" />
-              <p className="mt-3 font-sans-body text-[11px] uppercase tracking-wider text-muted-foreground">
-                {t('accessibility.tempImageFounder')}
-              </p>
+              <img src={IMG.jason} alt={t('accessibility.altImageFounder')} loading="lazy" decoding="async" className="aspect-[3/4] w-full rounded-sm object-cover" />
             </div>
           </Reveal>
           <Reveal delay={0.1} className="md:col-span-7">
@@ -555,8 +541,8 @@ export default function HomePage() {
       {/* Location */}
       <section className="border-b border-border bg-background">
         <div className="relative grid">
-          <img src={IMG.coast} alt={t('accessibility.imageCoast')} loading="lazy" decoding="async" className="col-start-1 row-start-1 aspect-[21/9] h-full max-h-[420px] min-h-full w-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+          <img src={IMG.carabao} alt={t('accessibility.imageHero')} loading="lazy" decoding="async" className="col-start-1 row-start-1 aspect-[21/9] h-full max-h-[420px] min-h-full w-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/80 to-background/80" />
           <div className="relative col-start-1 row-start-1 self-end px-5 pb-10 pt-10 text-center md:px-8">
             <p className="font-sans-body text-[11px] uppercase tracking-[0.3em] text-foreground/90">
               {t('location.headline')}
@@ -600,7 +586,7 @@ export default function HomePage() {
       <footer className="border-t py-14" style={{ backgroundColor: 'var(--footer-bg)', borderColor: 'var(--footer-border)', color: 'var(--footer-text)' }}>
         <div className="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-3 md:px-8 lg:px-10">
           <div className="md:col-span-1">
-            <p className="font-sans-body text-[11px] font-semibold uppercase tracking-[0.28em]">{t('footer.copyright')}</p>
+            <img src={asset('branding/imagotipo_oscuro_transparente.svg')} alt={t('footer.copyright')} width="1675" height="342" className="h-auto w-44 object-contain" />
             <p className="mt-4 max-w-xs font-sans-body text-xs leading-relaxed" style={{ color: 'var(--footer-muted)' }}>
               {t('footer.desc')}<br />
               {t('footer.location')}
@@ -623,7 +609,7 @@ export default function HomePage() {
             <ul className="space-y-2 font-sans-body text-sm" style={{ color: 'var(--footer-muted)' }}>
               <li>{t('footer.location')}</li>
               <li>
-                <a href={t('contact.emailHref')} className="rounded-sm transition hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold px-1" style={{ color: 'var(--footer-text)' }}>
+                <a href={t('contact.emailHref')} className="break-all rounded-sm transition hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold px-1" style={{ color: 'var(--footer-text)' }}>
                   {t('contact.emailAddress')}
                 </a>
               </li>

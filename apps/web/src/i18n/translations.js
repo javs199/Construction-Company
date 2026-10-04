@@ -45,19 +45,22 @@ const translations = {
     projects: {
       eyebrow: 'Selected Work',
       headline: 'Spaces shaped by vision, place and purpose.',
-      body: 'A sample of residences and renovations delivered in Costa Rica’s South Pacific.',
+      body: "Selected Construction Company work across ground-up construction, pool and finish work, and residential projects in Costa Rica.",
       list: [
         {
-          title: 'Project 01',
-          meta: 'Project name to be added · Location to be confirmed · Project type to be confirmed',
+          "title": "Casa Dapezi",
+          "meta": "Manuel Antonio · Ground-Up Residential Construction · In Progress",
+          "alt": "Casa Dapezi under construction in Manuel Antonio during ground-up residential construction."
         },
         {
-          title: 'Project 02',
-          meta: 'Project name to be added · Location to be confirmed · Project type to be confirmed',
+          "title": "Carabao Villa",
+          "meta": "Uvita · Pool & Finish Work · Completed",
+          "alt": "Carabao Villa in Uvita featuring pool and finish work by Construction Company."
         },
         {
-          title: 'Project 03',
-          meta: 'Project name to be added · Location to be confirmed · Project type to be confirmed',
+          "title": "Private Residence — Las Olas",
+          "meta": "Dominicalito · Ground-Up Residential Construction · Completed",
+          "alt": "Construction-stage view of the residence in Las Olas, Dominicalito, a completed ground-up Construction Company project."
         }
       ]
     },
@@ -85,36 +88,35 @@ const translations = {
       ]
     },
     services: {
-      eyebrow: 'Services',
-      headline: 'Complete expertise for exceptional properties.',
-      temporaryLabel: 'Temporary service visual — replace with client photography',
-      list: [
-        {
-          "number": "01",
-          "title": "Luxury Construction",
-          "description": "Built with purpose. Managed with care.\n\nFrom initial planning through construction and final finishes, Construction Company delivers residential projects with a focus on quality, communication, and attention to detail.\n\nEach project is approached individually, coordinating the work required to bring the vision to life while maintaining clear communication throughout the process.\n\nWith Jason personally involved in project oversight, clients have a direct connection to the person responsible for delivering the work.",
-          "alt": "Temporary visual reference for luxury residential construction"
-        },
-        {
-          "number": "02",
-          "title": "Remodeling & Renovation",
-          "description": "Transform what already exists.\n\nConstruction Company approaches renovations with the same level of attention as new construction, adapting existing spaces to better serve the way clients want to live, use, or invest in their property.\n\nFrom focused improvements to more extensive transformations, each project begins with an evaluation of the existing property and a clear understanding of the desired result.\n\nThe goal is not simply to make something look different, but to deliver thoughtful solutions, quality finishes, and improvements that feel considered as part of the property as a whole.",
-          "alt": "Temporary visual reference for a refined residential renovation"
-        },
-        {
-          "number": "03",
-          "title": "Custom Pools & Jacuzzis",
-          "description": "Designed for the property. Built for the experience.\n\nPools and jacuzzis are a core area of Construction Company's hands-on experience.\n\nEach project is approached as part of the property itself, considering how the new space will connect with its surroundings, how it will be used, and the level of finish expected by the client.\n\nFrom planning and construction through the finishing details, the focus remains on creating a result that combines function, craftsmanship, and thoughtful execution.",
-          "alt": "Temporary visual reference for a private custom pool"
-        },
-        {
-          "number": "04",
-          "title": "Property Care & Maintenance",
-          "description": "Care that continues beyond construction.\n\nConstruction Company provides ongoing property care and maintenance for owners who want a reliable point of contact when their property requires attention.\n\nNeeds are evaluated individually, allowing the company to coordinate practical solutions based on the property and the work required rather than forcing every client into the same maintenance package.\n\nFor owners who live abroad or spend extended periods away from their property, this provides continuity with a team already familiar with construction, renovation, and the long-term needs of the property.",
-          "alt": "Temporary visual reference for residential property care"
-        }
-      ]
-    },
+        "eyebrow": "Services",
+        "headline": "Complete expertise for exceptional properties.",
+        "list": [
+          {
+            "number": "01",
+            "title": "Luxury Construction",
+            "description": "Built with purpose. Managed with care.\n\nFrom initial planning through construction and final finishes, Construction Company delivers residential projects with a focus on quality, communication, and attention to detail.\n\nEach project is approached individually, coordinating the work required to bring the vision to life while maintaining clear communication throughout the process.\n\nWith Jason personally involved in project oversight, clients have a direct connection to the person responsible for delivering the work.",
+            "alt": "Residential construction work in progress by Construction Company."
+          },
+          {
+            "number": "02",
+            "title": "Remodeling & Renovation",
+            "description": "Transform what already exists.\n\nConstruction Company approaches renovations with the same level of attention as new construction, adapting existing spaces to better serve the way clients want to live, use, or invest in their property.\n\nFrom focused improvements to more extensive transformations, each project begins with an evaluation of the existing property and a clear understanding of the desired result.\n\nThe goal is not simply to make something look different, but to deliver thoughtful solutions, quality finishes, and improvements that feel considered as part of the property as a whole.",
+            "alt": "Residential remodeling and renovation work by Construction Company."
+          },
+          {
+            "number": "03",
+            "title": "Custom Pools & Jacuzzis",
+            "description": "Designed for the property. Built for the experience.\n\nPools and jacuzzis are a core area of Construction Company's hands-on experience.\n\nEach project is approached as part of the property itself, considering how the new space will connect with its surroundings, how it will be used, and the level of finish expected by the client.\n\nFrom planning and construction through the finishing details, the focus remains on creating a result that combines function, craftsmanship, and thoughtful execution.",
+            "alt": "Custom pool work by Construction Company."
+          },
+          {
+            "number": "04",
+            "title": "Property Care & Maintenance",
+            "description": "Care that continues beyond construction.\n\nConstruction Company provides ongoing property care and maintenance for owners who want a reliable point of contact when their property requires attention.\n\nNeeds are evaluated individually, allowing the company to coordinate practical solutions based on the property and the work required rather than forcing every client into the same maintenance package.\n\nFor owners who live abroad or spend extended periods away from their property, this provides continuity with a team already familiar with construction, renovation, and the long-term needs of the property.",
+            "alt": "Interior ceiling and finish details at a property cared for by Construction Company."
+          }
+        ]
+      },
     poolExpertise: {
       eyebrow: "Custom Pools & Jacuzzis",
       headline: "Designed for the property. Built for the experience.",
@@ -226,35 +228,28 @@ const translations = {
       phonePlaceholder: "+506 8539 6979"
     },
     accessibility: {
-      openMenu: 'Open menu',
-      closeMenu: 'Close menu',
-      switchToLight: 'Switch to Light Mode',
-      switchToDark: 'Switch to Dark Mode',
-      changeToEnglish: 'Change language to English',
-      changeToSpanish: 'Change language to Spanish',
-      skipToMain: 'Skip to main content',
-      tempVisualRef: 'Temporary visual reference — replace with client work',
-      imageHero: 'Luxury hillside villa with infinity pool in Costa Rica',
-      imagePool: 'Infinity pool overlooking rainforest',
-      imageArchitect: "Temporary on-site construction reference",
-      imageVanity: 'Warm wood vanity detail',
-      imagePlans: 'Reviewing construction plans',
-      imageVillaPool: 'Villa with infinity pool at dusk',
-      imageForest: 'Costa Rica rainforest canopy',
-      imageMeeting: 'Team reviewing project plans',
-      imageCoast: 'Aerial view of Costa Rica Pacific coastline',
-      langEn: 'EN',
-      langEs: 'ES',
-      tempImagePartner: 'Temporary on-site visual — replace with client photography',
-      tempImagePool: 'Temporary pool visual — replace with client photography',
-      altImagePool: 'Temporary visual reference of a private infinity pool integrated into a tropical residence',
-      tempImageRemotePrimary: 'Temporary coastal residence visual — replace with client photography',
-      tempImageRemoteSecondary: 'Project-update image placeholder',
-      altImageRemotePrimary: 'Temporary visual reference of a private tropical residence overlooking Costa Rica’s South Pacific',
-      altImageRemoteSecondary: 'Temporary project-update reference showing architectural plans and site coordination',
-      tempImageFounder: 'Founder image placeholder',
-      altImageFounder: 'Temporary founder image placeholder'
-    }
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu",
+        "switchToLight": "Switch to Light Mode",
+        "switchToDark": "Switch to Dark Mode",
+        "changeToEnglish": "Change language to English",
+        "changeToSpanish": "Change language to Spanish",
+        "skipToMain": "Skip to main content",
+        "imageHero": "Carabao Villa in Uvita featuring pool and finish work by Construction Company.",
+        "imagePool": "Custom pool work by Construction Company.",
+        "imageVanity": "Warm wood vanity detail",
+        "imageVillaPool": "Villa with infinity pool at dusk",
+        "imageForest": "Costa Rica rainforest canopy",
+        "imageMeeting": "Team reviewing project plans",
+        "langEn": "EN",
+        "langEs": "ES",
+        "altImagePool": "Custom pool work by Construction Company.",
+        "altImageRemotePrimary": "Finished outdoor area at Carabao Villa in Uvita.",
+        "altImageRemoteSecondary": "Interior property care and maintenance work by Construction Company.",
+        "altImageFounder": "Jason Cascante, founder of Construction Company.",
+        "imageConstruction": "Residential construction work in progress by Construction Company.",
+        "imageTeam": "Construction Company team working on site."
+      }
   },
   es: {
     seo: {
@@ -303,19 +298,22 @@ const translations = {
     projects: {
       eyebrow: 'Proyectos Seleccionados',
       headline: 'Espacios definidos por la visión, el lugar y el propósito.',
-      body: 'Una muestra de residencias y renovaciones entregadas en el Pacífico Sur de Costa Rica.',
+      body: "Una selección de trabajos de Construction Company que incluye construcción desde cero, piscinas, acabados y proyectos residenciales en Costa Rica.",
       list: [
         {
-          title: 'Proyecto 01',
-          meta: 'Nombre del proyecto pendiente · Ubicación por confirmar · Tipo de proyecto por confirmar',
+          "title": "Casa Dapezi",
+          "meta": "Manuel Antonio · Construcción Residencial Desde Cero · En Proceso",
+          "alt": "Casa Dapezi en construcción en Manuel Antonio durante su construcción residencial desde cero."
         },
         {
-          title: 'Proyecto 02',
-          meta: 'Nombre del proyecto pendiente · Ubicación por confirmar · Tipo de proyecto por confirmar',
+          "title": "Carabao Villa",
+          "meta": "Uvita · Piscina y Acabados · Terminado",
+          "alt": "Carabao Villa en Uvita con trabajos de piscina y acabados realizados por Construction Company."
         },
         {
-          title: 'Proyecto 03',
-          meta: 'Nombre del proyecto pendiente · Ubicación por confirmar · Tipo de proyecto por confirmar',
+          "title": "Residencia Privada — Las Olas",
+          "meta": "Dominicalito · Construcción Residencial Desde Cero · Terminada",
+          "alt": "Vista durante la construcción de la residencia en Las Olas, Dominicalito, un proyecto de Construction Company terminado y construido desde cero."
         }
       ]
     },
@@ -343,36 +341,35 @@ const translations = {
       ]
     },
     services: {
-      eyebrow: 'Servicios',
-      headline: 'Experiencia integral para propiedades excepcionales.',
-      temporaryLabel: 'Referencia visual temporal del servicio — reemplazar con fotografías del cliente',
-      list: [
-        {
-          "number": "01",
-          "title": "Construcción de Alto Nivel",
-          "description": "Construido con propósito. Ejecutado con cuidado.\n\nDesde la planificación inicial hasta la construcción y los acabados finales, Construction Company desarrolla proyectos residenciales con un enfoque en calidad, comunicación y atención al detalle.\n\nCada proyecto se aborda de manera individual, coordinando el trabajo necesario para convertir la visión del cliente en realidad y manteniendo una comunicación clara durante todo el proceso.\n\nCon Jason involucrado personalmente en la supervisión de los proyectos, los clientes mantienen una conexión directa con la persona responsable de ejecutar el trabajo.",
-          "alt": "Referencia visual temporal de construcción residencial de lujo"
-        },
-        {
-          "number": "02",
-          "title": "Remodelación y Renovación",
-          "description": "Transformamos lo que ya existe.\n\nConstruction Company aborda las remodelaciones con el mismo nivel de atención que una construcción nueva, adaptando espacios existentes a la manera en que sus propietarios desean vivir, utilizar o invertir en su propiedad.\n\nDesde mejoras específicas hasta transformaciones de mayor alcance, cada proyecto comienza con una evaluación de la propiedad existente y una comprensión clara del resultado que se desea alcanzar.\n\nEl objetivo no es simplemente hacer que un espacio luzca diferente, sino aportar soluciones bien pensadas, acabados de calidad y mejoras que se integren naturalmente con la propiedad en su conjunto.",
-          "alt": "Referencia visual temporal de una remodelación residencial refinada"
-        },
-        {
-          "number": "03",
-          "title": "Piscinas y Jacuzzis Personalizados",
-          "description": "Diseñados para la propiedad. Construidos para disfrutarlos.\n\nLas piscinas y los jacuzzis forman parte de las principales áreas de experiencia práctica de Construction Company.\n\nCada proyecto se aborda como parte integral de la propiedad, considerando cómo el nuevo espacio se relacionará con su entorno, cómo será utilizado y el nivel de acabado esperado por el cliente.\n\nDesde la planificación y construcción hasta los detalles finales, el enfoque se mantiene en crear un resultado que combine funcionalidad, calidad de ejecución y atención al detalle.",
-          "alt": "Referencia visual temporal de una piscina privada a medida"
-        },
-        {
-          "number": "04",
-          "title": "Cuidado y Mantenimiento de Propiedades",
-          "description": "El cuidado continúa después de la construcción.\n\nConstruction Company ofrece cuidado y mantenimiento de propiedades para propietarios que buscan un punto de contacto confiable cuando su propiedad requiere atención.\n\nCada necesidad se evalúa individualmente, permitiendo coordinar soluciones prácticas de acuerdo con la propiedad y el trabajo requerido, en lugar de limitar a todos los clientes a un mismo esquema de mantenimiento.\n\nPara propietarios que viven fuera del país o pasan largos períodos lejos de su propiedad, esto permite mantener continuidad con un equipo familiarizado con construcción, remodelación y las necesidades de la propiedad a largo plazo.",
-          "alt": "Referencia visual temporal de cuidado de una propiedad residencial"
-        }
-      ]
-    },
+        "eyebrow": "Servicios",
+        "headline": "Experiencia integral para propiedades excepcionales.",
+        "list": [
+          {
+            "number": "01",
+            "title": "Construcción de Alto Nivel",
+            "description": "Construido con propósito. Ejecutado con cuidado.\n\nDesde la planificación inicial hasta la construcción y los acabados finales, Construction Company desarrolla proyectos residenciales con un enfoque en calidad, comunicación y atención al detalle.\n\nCada proyecto se aborda de manera individual, coordinando el trabajo necesario para convertir la visión del cliente en realidad y manteniendo una comunicación clara durante todo el proceso.\n\nCon Jason involucrado personalmente en la supervisión de los proyectos, los clientes mantienen una conexión directa con la persona responsable de ejecutar el trabajo.",
+            "alt": "Trabajo de construcción residencial en proceso realizado por Construction Company."
+          },
+          {
+            "number": "02",
+            "title": "Remodelación y Renovación",
+            "description": "Transformamos lo que ya existe.\n\nConstruction Company aborda las remodelaciones con el mismo nivel de atención que una construcción nueva, adaptando espacios existentes a la manera en que sus propietarios desean vivir, utilizar o invertir en su propiedad.\n\nDesde mejoras específicas hasta transformaciones de mayor alcance, cada proyecto comienza con una evaluación de la propiedad existente y una comprensión clara del resultado que se desea alcanzar.\n\nEl objetivo no es simplemente hacer que un espacio luzca diferente, sino aportar soluciones bien pensadas, acabados de calidad y mejoras que se integren naturalmente con la propiedad en su conjunto.",
+            "alt": "Trabajo de remodelación y renovación residencial realizado por Construction Company."
+          },
+          {
+            "number": "03",
+            "title": "Piscinas y Jacuzzis Personalizados",
+            "description": "Diseñados para la propiedad. Construidos para disfrutarlos.\n\nLas piscinas y los jacuzzis forman parte de las principales áreas de experiencia práctica de Construction Company.\n\nCada proyecto se aborda como parte integral de la propiedad, considerando cómo el nuevo espacio se relacionará con su entorno, cómo será utilizado y el nivel de acabado esperado por el cliente.\n\nDesde la planificación y construcción hasta los detalles finales, el enfoque se mantiene en crear un resultado que combine funcionalidad, calidad de ejecución y atención al detalle.",
+            "alt": "Trabajo de piscina personalizada realizado por Construction Company."
+          },
+          {
+            "number": "04",
+            "title": "Cuidado y Mantenimiento de Propiedades",
+            "description": "El cuidado continúa después de la construcción.\n\nConstruction Company ofrece cuidado y mantenimiento de propiedades para propietarios que buscan un punto de contacto confiable cuando su propiedad requiere atención.\n\nCada necesidad se evalúa individualmente, permitiendo coordinar soluciones prácticas de acuerdo con la propiedad y el trabajo requerido, en lugar de limitar a todos los clientes a un mismo esquema de mantenimiento.\n\nPara propietarios que viven fuera del país o pasan largos períodos lejos de su propiedad, esto permite mantener continuidad con un equipo familiarizado con construcción, remodelación y las necesidades de la propiedad a largo plazo.",
+            "alt": "Detalles de cielo raso y acabados interiores en una propiedad atendida por Construction Company."
+          }
+        ]
+      },
     poolExpertise: {
       eyebrow: "Piscinas y Jacuzzis Personalizados",
       headline: "Diseñados para la propiedad. Construidos para disfrutarlos.",
@@ -484,35 +481,28 @@ const translations = {
       phonePlaceholder: "+506 8539 6979"
     },
     accessibility: {
-      openMenu: 'Abrir menú',
-      closeMenu: 'Cerrar menú',
-      switchToLight: 'Cambiar a modo claro',
-      switchToDark: 'Cambiar a modo oscuro',
-      changeToEnglish: 'Cambiar idioma a inglés',
-      changeToSpanish: 'Cambiar idioma a español',
-      skipToMain: 'Saltar al contenido principal',
-      tempVisualRef: 'Referencia visual temporal — reemplazar con trabajos del cliente',
-      imageHero: 'Villa de lujo en ladera con piscina infinita en Costa Rica',
-      imagePool: 'Piscina infinita con vista a la selva tropical',
-      imageArchitect: "Referencia temporal de construcción en obra",
-      imageVanity: 'Detalle de tocador de madera cálida',
-      imagePlans: 'Revisión de planos de construcción',
-      imageVillaPool: 'Villa con piscina infinita al anochecer',
-      imageForest: 'Dosel de la selva tropical de Costa Rica',
-      imageMeeting: 'Equipo revisando planos del proyecto',
-      imageCoast: 'Vista aérea de la costa del Pacífico de Costa Rica',
-      langEn: 'EN',
-      langEs: 'ES',
-      tempImagePartner: 'Referencia visual temporal en obra — reemplazar con fotografías del cliente',
-      tempImagePool: 'Referencia visual temporal de piscina — reemplazar con fotografías del cliente',
-      altImagePool: 'Referencia visual temporal de una piscina infinita privada integrada a una residencia tropical',
-      tempImageRemotePrimary: 'Referencia visual temporal de residencia costera — reemplazar con fotografías del cliente',
-      tempImageRemoteSecondary: 'Imagen temporal de actualización del proyecto',
-      altImageRemotePrimary: 'Referencia visual temporal de una residencia tropical privada con vista al Pacífico Sur de Costa Rica',
-      altImageRemoteSecondary: 'Referencia temporal de seguimiento de proyecto con planos arquitectónicos y coordinación de obra',
-      tempImageFounder: 'Imagen temporal del fundador',
-      altImageFounder: 'Imagen temporal pendiente del fundador'
-    }
+        "openMenu": "Abrir menú",
+        "closeMenu": "Cerrar menú",
+        "switchToLight": "Cambiar a modo claro",
+        "switchToDark": "Cambiar a modo oscuro",
+        "changeToEnglish": "Cambiar idioma a inglés",
+        "changeToSpanish": "Cambiar idioma a español",
+        "skipToMain": "Saltar al contenido principal",
+        "imageHero": "Carabao Villa en Uvita con trabajos de piscina y acabados realizados por Construction Company.",
+        "imagePool": "Trabajo de piscina personalizada realizado por Construction Company.",
+        "imageVanity": "Detalle de tocador de madera cálida",
+        "imageVillaPool": "Villa con piscina infinita al anochecer",
+        "imageForest": "Dosel de la selva tropical de Costa Rica",
+        "imageMeeting": "Equipo revisando planos del proyecto",
+        "langEn": "EN",
+        "langEs": "ES",
+        "altImagePool": "Trabajo de piscina personalizada realizado por Construction Company.",
+        "altImageRemotePrimary": "Área exterior terminada de Carabao Villa en Uvita.",
+        "altImageRemoteSecondary": "Trabajo interior de cuidado y mantenimiento de propiedades realizado por Construction Company.",
+        "altImageFounder": "Jason Cascante, fundador de Construction Company.",
+        "imageConstruction": "Trabajo de construcción residencial en proceso realizado por Construction Company.",
+        "imageTeam": "Equipo de Construction Company trabajando en obra."
+      }
   }
 };
 
