@@ -16,8 +16,9 @@ const translations = {
       { label: 'Contact', href: '#contact' },
     ],
     contact: {
-      emailAddress: 'construction.company770@gmail.com',
-      emailHref: 'mailto:construction.company770@gmail.com?subject=Project%20Inquiry%20%E2%80%94%20Construction%20Company'
+      emailSubject: 'Project Inquiry — Construction Company',
+      whatsappMessage: 'Hello Construction Company, I’d like to discuss a project or property in Costa Rica. Could we discuss the next steps?',
+      whatsappLabel: 'Discuss your project on WhatsApp (opens in a new tab)'
     },
     hero: {
       eyebrow: 'Costa Rica · Design · Build · Steward',
@@ -205,10 +206,6 @@ const translations = {
         { label: 'Personal work philosophy to be added' }
       ]
     },
-    testimonial: {
-      quote: 'Verified client testimonial to be added',
-      meta: 'Client name to be added · Project type to be added · Location to be confirmed'
-    },
     location: {
       headline: "Building throughout Costa Rica.",
       body: "Construction Company serves homeowners, investors, developers, and property managers across Costa Rica.\n\nEvery project is evaluated individually based on its location, scope, and requirements, allowing us to bring the same focus on quality, communication, and personal oversight wherever the work takes us."
@@ -224,8 +221,7 @@ const translations = {
       explore: 'Explore',
       services: 'Services',
       contact: 'Contact',
-      copyright: 'Construction Company',
-      phonePlaceholder: "+506 8539 6979"
+      copyright: 'Construction Company'
     },
     accessibility: {
         "openMenu": "Open menu",
@@ -268,8 +264,9 @@ const translations = {
       { label: 'Contacto', href: '#contact' },
     ],
     contact: {
-      emailAddress: 'construction.company770@gmail.com',
-      emailHref: 'mailto:construction.company770@gmail.com?subject=Consulta%20de%20proyecto%20%E2%80%94%20Construction%20Company'
+      emailSubject: 'Consulta de proyecto — Construction Company',
+      whatsappMessage: 'Hola Construction Company, quisiera conversar sobre un proyecto o una propiedad en Costa Rica. ¿Podemos hablar sobre los próximos pasos?',
+      whatsappLabel: 'Hablemos de su proyecto por WhatsApp (se abre en una pestaña nueva)'
     },
     hero: {
       eyebrow: 'Costa Rica · Diseño · Construcción · Cuidado',
@@ -458,10 +455,6 @@ const translations = {
         { label: 'Filosofía de trabajo personal pendiente' }
       ]
     },
-    testimonial: {
-      quote: 'Testimonio verificado de cliente pendiente',
-      meta: 'Nombre del cliente pendiente · Tipo de proyecto pendiente · Ubicación por confirmar'
-    },
     location: {
       headline: "Construimos en todo Costa Rica.",
       body: "Construction Company atiende a propietarios, inversionistas, desarrolladores y administradores de propiedades en todo Costa Rica.\n\nCada proyecto se evalúa individualmente según su ubicación, alcance y requerimientos, permitiéndonos mantener el mismo enfoque en calidad, comunicación y supervisión personal dondequiera que se desarrolle el trabajo."
@@ -477,8 +470,7 @@ const translations = {
       explore: 'Explorar',
       services: 'Servicios',
       contact: 'Contacto',
-      copyright: 'Construction Company',
-      phonePlaceholder: "+506 8539 6979"
+      copyright: 'Construction Company'
     },
     accessibility: {
         "openMenu": "Abrir menú",

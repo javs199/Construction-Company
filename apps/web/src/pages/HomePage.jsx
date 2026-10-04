@@ -4,6 +4,7 @@ import { useTheme } from 'next-themes';
 import { Menu, X, Moon, Sun, Check } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import Seo from '@/components/Seo';
+import { CONTACT } from '@/config/contact';
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/i18n/LanguageContext';
 
@@ -76,6 +77,7 @@ function Header() {
   const [open, setOpen] = useState(false);
   const { t } = useLanguage();
   const nav = t('navigation');
+  const whatsappHref = `${CONTACT.whatsappBase}?text=${encodeURIComponent(t('contact.whatsappMessage'))}`;
   const menuBtnRef = React.useRef(null);
 
   React.useEffect(() => {
@@ -115,7 +117,10 @@ function Header() {
           <LanguageToggle className="hidden sm:flex mr-2" />
           <ThemeToggle />
           <a
-            href="#contact"
+            href={whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={t('contact.whatsappLabel')}
             className="hidden rounded-sm bg-primary px-5 py-2.5 font-sans-body text-[12px] font-medium tracking-wide text-primary-foreground transition hover:opacity-90 sm:inline-flex focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             {t('hero.ctaDiscuss')}
@@ -148,7 +153,10 @@ function Header() {
               </a>
             ))}
             <a
-              href="#contact"
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t('contact.whatsappLabel')}
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex justify-center rounded-sm bg-primary px-5 py-3 text-sm text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
@@ -167,7 +175,10 @@ export default function HomePage() {
   const servicesList = t('services.list');
   const approachPhases = t('approach.phases');
   const nav = t('navigation');
+  const whatsappHref = `${CONTACT.whatsappBase}?text=${encodeURIComponent(t('contact.whatsappMessage'))}`;
   
+  const emailHref = `mailto:${CONTACT.email}?subject=${encodeURIComponent(t('contact.emailSubject'))}`;
+
   const projectImgs = [IMG.casaDapezi, IMG.carabao, IMG.lasOlas];
 
   return (
@@ -214,7 +225,10 @@ export default function HomePage() {
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a
-                  href="#contact"
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t('contact.whatsappLabel')}
                   className="inline-flex items-center gap-2 rounded-sm bg-primary px-6 py-3 font-sans-body text-[13px] font-medium text-primary-foreground transition hover:opacity-90 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
                   {t('hero.ctaDiscuss')}
@@ -521,23 +535,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonial */}
-      <section className="border-b border-border bg-background py-20 md:py-28">
-        <div className="mx-auto max-w-3xl px-5 text-center md:px-8">
-          <Reveal>
-            <div className="mx-auto mb-8 flex h-8 w-8 items-center justify-center">
-              <span className="block h-2 w-2 rotate-45 bg-gold" />
-            </div>
-            <blockquote className="font-display text-2xl font-medium leading-snug text-foreground md:text-3xl lg:text-[2.15rem]">
-              {t('testimonial.quote')}
-            </blockquote>
-            <p className="mt-8 font-sans-body text-xs uppercase tracking-[0.22em] text-muted-foreground">
-              {t('testimonial.meta')}
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
       {/* Location */}
       <section className="border-b border-border bg-background">
         <div className="relative grid">
@@ -565,15 +562,18 @@ export default function HomePage() {
               {t('finalCta.body')}
             </p>
             <a
-              href={t('contact.emailHref')}
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t('contact.whatsappLabel')}
               className="mt-10 inline-flex rounded-sm px-8 py-3.5 font-sans-body text-[13px] font-medium transition active:scale-[0.98] bg-[var(--final-cta-button-bg)] text-[var(--final-cta-button-text)] hover:bg-[var(--final-cta-button-hover-bg)] hover:text-[var(--final-cta-button-hover-text)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
             >
               {t('finalCta.cta')}
             </a>
             <div className="mt-8 flex flex-col items-center gap-2 font-sans-body text-xs sm:flex-row sm:justify-center sm:gap-4" style={{ color: 'var(--final-cta-muted)' }}>
-              <a href={t('contact.emailHref')} className="rounded-sm transition hover:text-[var(--final-cta-text)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold px-1">{t('contact.emailAddress')}</a>
+              <a href={emailHref} className="rounded-sm transition hover:text-[var(--final-cta-text)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold px-1">{CONTACT.email}</a>
               <span className="hidden sm:inline">·</span>
-              <span>{t('footer.phonePlaceholder')}</span>
+              <a href={CONTACT.phoneHref} className="rounded-sm transition hover:text-[var(--final-cta-text)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold">{CONTACT.phoneDisplay}</a>
               <span className="hidden sm:inline">·</span>
               <span>{t('footer.location')}</span>
             </div>
@@ -609,11 +609,11 @@ export default function HomePage() {
             <ul className="space-y-2 font-sans-body text-sm" style={{ color: 'var(--footer-muted)' }}>
               <li>{t('footer.location')}</li>
               <li>
-                <a href={t('contact.emailHref')} className="break-all rounded-sm transition hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold px-1" style={{ color: 'var(--footer-text)' }}>
-                  {t('contact.emailAddress')}
+                <a href={emailHref} className="break-all rounded-sm transition hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold px-1" style={{ color: 'var(--footer-text)' }}>
+                  {CONTACT.email}
                 </a>
               </li>
-              <li>{t('footer.phonePlaceholder')}</li>
+              <li><a href={CONTACT.phoneHref} className="rounded-sm transition hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold">{CONTACT.phoneDisplay}</a></li>
             </ul>
           </div>
         </div>
